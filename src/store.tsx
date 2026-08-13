@@ -26,6 +26,7 @@ import {
   todayLog,
 } from './srs/queue';
 import * as db from './db/db';
+import { requestPersistence, type StorageStatus } from './db/storage';
 import { watchVoices, type VoiceState } from './audio/tts';
 
 interface Store {
@@ -35,6 +36,7 @@ interface Store {
   cardsByKey: Map<string, CardState>;
   daily: DailyLog[];
   voice: VoiceState;
+  storage: StorageStatus | null;
   /** True when audio is usable: a Thai voice exists on this device. */
   canSpeak: boolean;
   queue: ReturnType<typeof buildQueue>;
@@ -60,6 +62,7 @@ export function StoreProvider({ children }: { children: ReactNode }) {
   const [stored, setStored] = useState<Map<string, CardState>>(new Map());
   const [daily, setDaily] = useState<DailyLog[]>([]);
   const [voice, setVoice] = useState<VoiceState>({ status: 'loading', voices: [] });
+  const [storage, setStorage] = useState<StorageStatus | null>(null);
   const [leechAlert, setLeechAlert] = useState<string | null>(null);
   // Bumped once a minute so learning steps (1 min, 10 min) come due without a
   // manual refresh. Cheap: it only re-derives the queue.
@@ -81,6 +84,18 @@ export function StoreProvider({ children }: { children: ReactNode }) {
   }, []);
 
   useEffect(() => watchVoices(setVoice), []);
+
+  // Ask to be exempt from disk-pressure eviction. Silent when granted, and a
+  // refusal changes nothing except what Settings reports.
+  useEffect(() => {
+    let live = true;
+    void requestPersistence().then((s) => {
+      if (live) setStorage(s);
+    });
+    return () => {
+      live = false;
+    };
+  }, []);
 
   useEffect(() => {
     const id = setInterval(() => setTick((t) => t + 1), 30_000);
@@ -214,6 +229,7 @@ export function StoreProvider({ children }: { children: ReactNode }) {
     cardsByKey,
     daily,
     voice,
+    storage,
     canSpeak,
     queue,
     leechAlert,

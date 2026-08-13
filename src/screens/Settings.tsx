@@ -1,6 +1,7 @@
 import { useRef, useState } from 'react';
 import { useStore } from '../store';
 import { PLATFORM_HELP, speakThai } from '../audio/tts';
+import { formatBytes, isAtRiskIosTab } from '../db/storage';
 import { DIRECTIONS, type Direction } from '../types';
 
 const DIRECTION_COPY: Record<Direction, { title: string; body: string }> = {
@@ -211,6 +212,10 @@ export function Settings({ onOpenPrimer }: { onOpenPrimer: () => void }) {
         </button>
       </Section>
 
+      <Section title="Your progress">
+        <StorageReport />
+      </Section>
+
       <Section title="Backup">
         <p className="text-xs opacity-65">
           There is no server and no account. This file is the only backup that exists.
@@ -265,6 +270,84 @@ export function Settings({ onOpenPrimer }: { onOpenPrimer: () => void }) {
           }}
         />
       </Section>
+    </div>
+  );
+}
+
+/**
+ * The honest answer to "will this remember my progress forever?".
+ *
+ * Reports what the browser has actually granted rather than reassuring, and
+ * names the one case that loses data on a timer regardless of anything the app
+ * can do: iOS Safari in a tab, where ITP deletes script-writable storage after
+ * 7 days without a visit. Installing to the Home Screen is the fix, because an
+ * installed web app runs outside Safari's counter.
+ */
+function StorageReport() {
+  const { storage, cards } = useStore();
+  const started = cards.filter((c) => c.stage !== 'new' || c.reps > 0).length;
+
+  if (!storage) return <p className="text-sm opacity-65">Checking…</p>;
+
+  const atRisk = isAtRiskIosTab(storage);
+
+  return (
+    <div className="flex flex-col gap-2">
+      <p className="text-sm">
+        <strong className="tabular-nums">{started}</strong> card
+        {started === 1 ? '' : 's'} in progress, stored on this device only. Nothing is ever sent
+        anywhere.
+      </p>
+
+      <dl className="flex flex-col gap-1 text-xs">
+        <Row
+          label="Installed to Home Screen"
+          value={storage.installed ? 'yes' : 'no — running in a browser tab'}
+          good={storage.installed}
+        />
+        <Row
+          label="Protected from eviction"
+          value={
+            !storage.supported
+              ? 'this browser will not say'
+              : storage.persisted
+                ? 'yes, the browser granted it'
+                : 'not granted — data can be cleared if the device runs low on space'
+          }
+          good={storage.persisted}
+        />
+        {storage.usageBytes !== null && (
+          <Row label="Space used" value={formatBytes(storage.usageBytes)} />
+        )}
+      </dl>
+
+      {atRisk && (
+        <div className="rounded-xl border border-tone-high/45 bg-tone-high/10 px-3 py-2 text-xs leading-relaxed">
+          <strong>On iPhone this will be wiped after 7 days without opening it.</strong> Safari
+          deletes site data on a timer, and that includes review progress. Tap Share → Add to Home
+          Screen and launch it from the icon instead — an installed web app sits outside that timer.
+        </div>
+      )}
+
+      <p className="text-xs leading-relaxed opacity-65">
+        Nothing a web app can do makes storage permanent. Clearing site data always erases it, and
+        this device is the only copy — progress here does not appear on your laptop. Export a backup
+        now and then; it is the only thing that survives everything.
+      </p>
+    </div>
+  );
+}
+
+function Row({ label, value, good }: { label: string; value: string; good?: boolean }) {
+  return (
+    <div className="flex items-baseline justify-between gap-3">
+      <dt className="opacity-65">{label}</dt>
+      <dd
+        className="text-right font-medium"
+        style={good === undefined ? undefined : { color: good ? 'var(--tone-rising-text)' : 'var(--tone-high-text)' }}
+      >
+        {value}
+      </dd>
     </div>
   );
 }

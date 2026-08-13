@@ -257,6 +257,27 @@ both work.
 Fully operable without a mouse. Verified end to end: three cards graded by keyboard alone, with the
 resulting IndexedDB state checked against what SM-2 should have written.
 
+## Does progress last?
+
+Not automatically, and the app now says so rather than implying otherwise.
+
+`src/db/storage.ts` asks for `navigator.storage.persist()` on every load, which exempts the origin
+from disk-pressure eviction where the browser supports it. Settings → **Your progress** reports
+what was actually granted, how much space is used, and whether the app is installed.
+
+Three things can still take the data:
+
+1. **Clearing site data.** Nothing can or should prevent it.
+2. **Disk pressure**, if persistence was not granted.
+3. **iOS Safari's 7-day rule.** Apple's ITP deletes *all* script-writable storage after 7 days of
+   Safari use without visiting the site — **IndexedDB included, not just localStorage**. The brief's
+   premise ("use IndexedDB, localStorage gets wiped") is only half right: on iOS both go. What
+   actually protects the data is **Add to Home Screen** — an installed web app runs outside Safari
+   and outside that counter. Settings detects iOS-Safari-in-a-tab specifically and says so in red.
+
+There is also no sync. Phone progress and laptop progress are separate decks. Export is the only
+thing that survives all of it.
+
 ## Backup
 
 Settings → Export JSON is the only backup that exists. Import **replaces** everything rather than
