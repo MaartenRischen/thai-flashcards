@@ -1,4 +1,7 @@
-import { defineConfig } from 'vite';
+// From vitest, not vite: it is the same defineConfig widened to accept `test`.
+// Vite's own type rejects that key, which went unnoticed until this file was
+// actually typechecked.
+import { defineConfig } from 'vitest/config';
 import react from '@vitejs/plugin-react';
 import tailwindcss from '@tailwindcss/vite';
 import { VitePWA } from 'vite-plugin-pwa';
