@@ -209,21 +209,23 @@ The final self-audit re-read all 100 cold and rewrote the worst five outright:
 
 ### Art
 
-`src/art/index.tsx` holds 47 drawn components covering **107 of 169 panels (63%)**. The remaining
-62 fall back to the typographic card — a large amber pill with the scene description beneath.
+`src/art/index.tsx` holds **106 drawn components covering all 169 panels**. Nothing falls back to
+the typographic card any more.
 
-The fallback is per *panel*, not per phrase, and `ART` is the registry of what has actually been
-drawn. A phrase naming a component that does not exist yet is not an error. That is what lets the
-illustration work land one panel at a time without ever breaking the app, and it is why the app was
-usable before a single drawing existed.
+The fallback still exists and is still per *panel*, not per phrase: `ART` is the registry of what
+has actually been drawn, and a phrase naming a component that is not in it renders as a large amber
+pill with the scene description beneath. That is what let the illustration work land one panel at a
+time without ever breaking the app — the deck was fully usable at 0% coverage, at 63%, and now at
+100%.
 
-Drawn and undrawn panels share a frame on purpose. A card with one of each has to read as one card,
-not as a finished half next to a broken half.
+Drawn and undrawn panels share a frame on purpose, so a card that mixed the two read as one card
+rather than a finished half beside a broken half.
 
-All four modules from §5 are drawn (`ไม่`, `ขอ`, `ครับ`, `ค่ะ`, plus `ได้ไหม`), as are both worked
-records and the whole recurring cast. Panel rules hold throughout: 270×190 viewBox, transparent,
-no gradients or filters or shadows, line work in `currentColor` so it can never vanish in either
-theme, fills from `--art-*` variables that flip.
+Panel rules hold throughout: 270×190 viewBox, transparent, no gradients or filters or shadows, line
+work in `currentColor` so it can never vanish in either theme, fills from `--art-*` variables that
+flip. Recurring cast (Dee, Leo, the Cow, the Crow, the Raccoon, the Pie, Pet) is drawn once and
+composed; so are the modules and the shared props — the ไหน knight appears on six cards, the ไม่
+palm on ten.
 
 ---
 
@@ -290,7 +292,6 @@ import. All three cards came back with byte-identical `due` and `ease`.
 ## Known gaps
 
 1. **No device testing beyond headless Chromium on macOS.** See the audio table above.
-2. **62 panels are still typographic.** Deliberate and incremental, but they are not drawings.
-3. **27 weak mnemonics.** Flagged and explained, not hidden — but they are the cards most worth
+2. **27 weak mnemonics.** Flagged and explained, not hidden — but they are the cards most worth
    replacing next.
-4. **No Thai script reading instruction**, no grammar, no sentence builder, no sync. All non-goals.
+3. **No Thai script reading instruction**, no grammar, no sentence builder, no sync. All non-goals.

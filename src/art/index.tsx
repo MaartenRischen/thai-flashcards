@@ -975,6 +975,928 @@ function Prawn({ pot }: ArtProps) {
   );
 }
 
+/* ------------------------------------------------------- remaining panel props */
+
+function AnTile({ onKnee }: ArtProps) {
+  return (
+    <g>
+      <Ground />
+      {onKnee === true && (
+        <path d="M74 26 q28 0 32 38 q4 32 20 48 q16 14 12 44" fill="none" stroke={FILL} strokeWidth="30" strokeLinecap="round" />
+      )}
+      <rect x="86" y="70" width="46" height="46" rx="6" fill={AMBER} {...stroke} />
+      <rect x="138" y="70" width="46" height="46" rx="6" fill={AMBER} {...stroke} />
+      <text x="109" y="103" textAnchor="middle" fontSize="30" fontWeight="700" fill={L}>A</text>
+      <text x="161" y="103" textAnchor="middle" fontSize="30" fontWeight="700" fill={L}>N</text>
+      {onKnee !== true && <path d="M60 128 h150" {...stroke} opacity={0.5} />}
+    </g>
+  );
+}
+
+function BagTongue() {
+  return (
+    <g>
+      <Ground />
+      <path d="M76 44 q60-18 118 0 q6 26-16 30 q-46 8-86 0 q-22-4-16-30z" fill={FILL} {...stroke} />
+      <path d="M104 74 q34 40 22 76 q-8 22-26 6 q-18-18 4-82z" fill={PINK} {...stroke} />
+      <path d="M112 90 q10 30 6 52" {...thin} opacity={0.45} />
+      <path d="M128 128 q30-8 44 10 l6 34 h-46z" fill={BLUE} {...stroke} opacity={0.75} />
+      <path d="M136 132 q14-14 26 0" fill="none" {...thin} />
+    </g>
+  );
+}
+
+function Barn() {
+  return (
+    <g>
+      <Ground />
+      <path d="M50 158 v-64 l84-40 l84 40 v64z" fill={RED} {...stroke} />
+      <path d="M108 158 v-52 h52 v52" fill={DEEP} {...stroke} />
+      <path d="M108 106 l52 52 M160 106 l-52 52" {...thin} opacity={0.5} />
+      <path d="M134 54 v-16" {...thin} />
+      <rect x="122" y="66" width="24" height="20" rx="3" fill={FILL} {...thin} />
+    </g>
+  );
+}
+
+function BootMud() {
+  return (
+    <g>
+      <Ground />
+      <path d="M96 34 h40 v70 q30 8 34 30 h-96 q-4-26 22-30z" fill={DEEP} {...stroke} />
+      <path d="M96 92 h40" {...thin} opacity={0.5} />
+      <path d="M40 138 q34-14 74-6 q42 8 106 0 q-6 22-34 24 h-112 q-30-2-34-18z" fill={FILL} {...stroke} />
+      <path d="M60 130 q8-14 16-4 M190 128 q10-12 16-2" {...thin} opacity={0.6} />
+    </g>
+  );
+}
+
+function BurntMatch() {
+  return (
+    <g>
+      <Ground />
+      <path d="M50 140 L184 62" stroke={FILL} strokeWidth="12" strokeLinecap="round" />
+      <path d="M50 140 L184 62" {...thin} opacity={0.35} />
+      <path d="M186 60 q22-6 22 12 q0 16-18 12 q-16-4-4-24z" fill={L} />
+      <path d="M196 40 q8-10 4-18 M212 46 q10-6 12-16" {...thin} opacity={0.45} />
+    </g>
+  );
+}
+
+function Cheer() {
+  return (
+    <g>
+      <Ground />
+      <circle cx="104" cy="80" r="34" fill={FILL} {...stroke} />
+      <circle cx="92" cy="70" r="4" fill={L} />
+      <circle cx="118" cy="70" r="4" fill={L} />
+      <ellipse cx="106" cy="98" rx="18" ry="16" fill={L} />
+      <path d="M90 92 q16-8 32 0" stroke={FILL} strokeWidth="3" fill="none" />
+      <g stroke={AMBER} strokeWidth="4" fill="none" strokeLinecap="round">
+        <path d="M144 78 q14 14 0 28" />
+        <path d="M162 66 q24 22 0 52" />
+      </g>
+      <circle cx="200" cy="52" r="24" fill={RED} {...stroke} />
+      <g stroke={RED} strokeWidth="4" strokeLinecap="round">
+        <path d="M200 28 v-14 M180 36 l-10-10 M220 36 l10-10 M178 68 l-12 8 M222 68 l12 8" />
+      </g>
+      <path d="M196 76 L186 118" {...stroke} />
+    </g>
+  );
+}
+
+function Chew() {
+  return (
+    <g>
+      <Ground />
+      <path d="M62 62 q72-24 146 0 q10 30-18 40 q-56 12-110 0 q-28-10-18-40z" fill={FILL} {...stroke} />
+      <path d="M62 102 q72 34 146 0 q-8 40-73 40 q-65 0-73-40z" fill={FILL} {...stroke} />
+      <path d="M74 74 h122" {...thin} opacity={0.5} />
+      <path d="M92 66 v14 M118 64 v16 M146 64 v16 M172 66 v14" {...thin} opacity={0.5} />
+      <path d="M40 74 q-10 26 10 46 M226 74 q10 26-10 46" {...thin} opacity={0.6} />
+    </g>
+  );
+}
+
+function ChewyStuck() {
+  return (
+    <g>
+      <Ground />
+      <path d="M56 148 v-40 q-2-16 12-16 t14 16 v-12 q0-14 13-14 t13 14 v6 q0-12 12-12 t12 12 v28 q0 32-30 34z" fill={FILL} {...stroke} />
+      <path d="M136 118 q46-6 60 20 q10 18 34 14" fill="none" stroke={AMBER} strokeWidth="14" strokeLinecap="round" />
+      <path d="M136 118 q46-6 60 20 q10 18 34 14" fill="none" {...thin} opacity={0.4} />
+      <path d="M100 40 q10-8 16 2 M124 34 q12-4 16 6" {...thin} opacity={0.6} />
+    </g>
+  );
+}
+
+function ChowKeys() {
+  return (
+    <g>
+      <Ground />
+      <path d="M50 96 h140 q-8 54-70 54 t-70-54z" fill={FILL} {...stroke} />
+      <ellipse cx="120" cy="96" rx="70" ry="14" fill={DEEP} {...stroke} />
+      <path d="M84 76 q8-16 16-4 M116 70 q8-18 16-4 M148 76 q8-16 16-4" {...thin} opacity={0.6} />
+      <circle cx="196" cy="86" r="14" fill={AMBER} {...stroke} />
+      <circle cx="196" cy="86" r="5" fill="none" {...thin} />
+      <path d="M210 86 h34" stroke={AMBER} strokeWidth="8" strokeLinecap="round" />
+      <path d="M232 86 v12 M244 86 v10" stroke={AMBER} strokeWidth="6" strokeLinecap="round" />
+    </g>
+  );
+}
+
+function ClockMoan() {
+  return (
+    <g>
+      <Ground />
+      <circle cx="180" cy="66" r="42" fill={FILL} {...stroke} />
+      <circle cx="180" cy="66" r="4" fill={L} />
+      <path d="M180 66 V38 M180 66 l22 14" {...stroke} />
+      <path d="M180 24 v-8 M222 66 h8 M180 108 v8 M138 66 h-8" {...thin} opacity={0.6} />
+      <circle cx="80" cy="76" r="26" fill={FILL} {...stroke} />
+      <circle cx="72" cy="70" r="3.5" fill={L} />
+      <circle cx="90" cy="70" r="3.5" fill={L} />
+      <ellipse cx="80" cy="90" rx="10" ry="8" fill={L} />
+      <path d="M62 96 L52 158 M98 96 L106 158" {...stroke} />
+      <path d="M56 44 h16 M88 44 h16" {...thin} />
+      <path d="M112 40 q10-6 14 2 M120 24 q10-2 14 6" {...thin} opacity={0.6} />
+    </g>
+  );
+}
+
+function CoinBat() {
+  return (
+    <g>
+      <Ground />
+      <path d="M42 148 L74 116" stroke={L} strokeWidth="10" strokeLinecap="round" />
+      <path d="M74 116 q34-40 76-56 q18-6 20 12 q2 18-40 44 q-34 22-56 0z" fill={FILL} {...stroke} />
+      <ellipse cx="176" cy="46" rx="26" ry="9" fill={AMBER} {...stroke} />
+      <ellipse cx="176" cy="34" rx="26" ry="9" fill={AMBER} {...stroke} />
+      <ellipse cx="176" cy="22" rx="26" ry="9" fill={AMBER} {...stroke} />
+    </g>
+  );
+}
+
+function Dawn() {
+  return (
+    <g>
+      <path d="M28 136 h214" {...stroke} />
+      <path d="M134 136 a44 44 0 0 1 88 0z" fill={AMBER} {...stroke} transform="translate(-44 0)" />
+      <g stroke={AMBER} strokeWidth="4" strokeLinecap="round">
+        <path d="M134 62 v-24 M76 84 l-18-18 M192 84 l18-18 M52 130 h-24 M216 130 h24" />
+      </g>
+      <path d="M40 158 q46-14 94 0 q46 14 94 0" fill="none" {...stroke} opacity={0.45} />
+    </g>
+  );
+}
+
+function DoughSink() {
+  return (
+    <g>
+      <Ground />
+      <path d="M36 152 q-6-52 38-64 q40-12 62 8 q42-16 72 14 q26 26 12 42z" fill={FILL} {...stroke} />
+      <path d="M132 106 v-46 M152 108 v-42 M172 112 v-36" stroke={L} strokeWidth="9" strokeLinecap="round" />
+      <path d="M120 112 q20-10 62-4" fill="none" {...thin} opacity={0.5} />
+      <path d="M70 118 q10-8 16 2 M96 108 q10-6 14 4" {...thin} opacity={0.45} />
+    </g>
+  );
+}
+
+function EngineBlock() {
+  return (
+    <g>
+      <Ground />
+      <rect x="60" y="76" width="130" height="76" rx="6" fill={DEEP} {...stroke} />
+      <rect x="76" y="44" width="26" height="34" rx="4" fill={FILL} {...stroke} />
+      <rect x="112" y="34" width="26" height="44" rx="4" fill={FILL} {...stroke} />
+      <rect x="148" y="44" width="26" height="34" rx="4" fill={FILL} {...stroke} />
+      <path d="M60 104 h130 M60 126 h130" {...thin} opacity={0.45} />
+      <circle cx="196" cy="120" r="20" fill={FILL} {...stroke} />
+      <circle cx="196" cy="120" r="7" fill={L} />
+      <path d="M42 96 h18 M42 132 h18" {...stroke} />
+    </g>
+  );
+}
+
+function FeltMark() {
+  return (
+    <g>
+      <rect x="60" y="24" width="150" height="140" rx="5" fill={FILL} {...stroke} />
+      <path d="M76 60 h118 M76 82 h118 M76 104 h80" {...thin} opacity={0.4} />
+      <path d="M22 96 q112-34 226 12" fill="none" stroke={AMBER} strokeWidth="22" strokeLinecap="round" />
+    </g>
+  );
+}
+
+function FullImp() {
+  return (
+    <g>
+      <Ground />
+      <ellipse cx="130" cy="112" rx="52" ry="44" fill={FILL} {...stroke} />
+      <circle cx="130" cy="52" r="26" fill={FILL} {...stroke} />
+      <path d="M108 34 l-6-18 l18 10z M152 34 l6-18 l-18 10z" fill={RED} {...stroke} />
+      <circle cx="121" cy="50" r="3.5" fill={L} />
+      <circle cx="139" cy="50" r="3.5" fill={L} />
+      <path d="M120 64 q10 8 20 0" {...thin} />
+      <path d="M118 108 q12 10 24 0" {...thin} opacity={0.5} />
+      <path d="M78 108 q-14 8-10 22 M182 108 q14 8 10 22" fill="none" {...stroke} />
+      <path d="M186 140 q22 4 26-14" fill="none" {...thin} />
+    </g>
+  );
+}
+
+function GinGlass() {
+  return (
+    <g>
+      <Ground />
+      <path d="M74 44 h112 l-50 56 v46 h26 v14 h-64 v-14 h26 v-46z" fill={FILL} {...stroke} />
+      <path d="M92 60 h76 l-32 36 z" fill={BLUE} opacity={0.55} />
+      <circle cx="150" cy="72" r="7" fill={GREEN} {...thin} />
+    </g>
+  );
+}
+
+function Glub() {
+  return (
+    <g>
+      <path d="M20 40 q42 16 84 0 q42-16 84 0 q30 12 46 0" fill="none" stroke={BLUE} strokeWidth="4" strokeLinecap="round" opacity={0.7} />
+      <circle cx="128" cy="106" r="40" fill="none" stroke={BLUE} strokeWidth="5" />
+      <circle cx="112" cy="90" r="10" fill={BLUE} opacity={0.45} />
+      <circle cx="76" cy="150" r="14" fill="none" stroke={BLUE} strokeWidth="4" />
+      <circle cx="186" cy="146" r="9" fill="none" stroke={BLUE} strokeWidth="4" />
+      <circle cx="150" cy="170" r="6" fill="none" stroke={BLUE} strokeWidth="3" />
+    </g>
+  );
+}
+
+function Gong() {
+  return (
+    <g>
+      <Ground />
+      <path d="M62 22 h116 M70 22 v14 M170 22 v14" {...stroke} />
+      <circle cx="120" cy="94" r="56" fill={AMBER} {...stroke} />
+      <circle cx="120" cy="94" r="24" fill="none" {...stroke} opacity={0.6} />
+      <path d="M120 36 v-14 M100 36 l-30-8 M140 36 l30-8" {...thin} opacity={0.6} />
+      <path d="M198 118 L232 96" stroke={L} strokeWidth="8" strokeLinecap="round" />
+      <circle cx="192" cy="122" r="14" fill={DEEP} {...stroke} />
+      <g stroke={RED} strokeWidth="3" fill="none" strokeLinecap="round">
+        <path d="M186 44 q14-10 24 2" />
+        <path d="M198 26 q22-10 34 6" />
+      </g>
+    </g>
+  );
+}
+
+function GuyHen() {
+  return (
+    <g>
+      <Ground />
+      <circle cx="104" cy="70" r="26" fill={FILL} {...stroke} />
+      <path d="M74 54 h60 q4-18-30-18 t-30 18z" fill={DEEP} {...stroke} />
+      <path d="M74 54 h-16" {...stroke} />
+      <circle cx="96" cy="70" r="3.5" fill={L} />
+      <circle cx="114" cy="70" r="3.5" fill={L} />
+      <path d="M96 84 q10 6 18 0" {...thin} />
+      <path d="M76 158 v-42 q0-20 28-20 t28 20 v42" fill={FILL} {...stroke} />
+      <path d="M80 122 q26 16 48 0" fill="none" {...thin} opacity={0.5} />
+      <ellipse cx="190" cy="106" rx="34" ry="26" fill={FILL} {...stroke} />
+      <circle cx="212" cy="78" r="18" fill={FILL} {...stroke} />
+      <path d="M206 60 q6-14 12 0 q-6 4-12 0z" fill={RED} {...thin} />
+      <circle cx="218" cy="74" r="3" fill={L} />
+      <path d="M228 84 l16 4 l-16 6z" fill={AMBER} {...thin} />
+      <path d="M162 116 q-14 6-14 20" fill="none" {...thin} />
+    </g>
+  );
+}
+
+function HelmetSigh() {
+  return (
+    <g>
+      <Ground />
+      <path d="M62 130 q-4-72 62-72 q66 0 62 72z" fill={RED} {...stroke} />
+      <path d="M84 96 q40-16 84 0 l-6 26 h-72z" fill={DEEP} {...stroke} />
+      <path d="M62 130 h124 v14 h-124z" fill={FILL} {...stroke} />
+      <g stroke={BLUE} fill="none" strokeLinecap="round" opacity={0.85}>
+        <path d="M190 112 q28 4 40 18" strokeWidth="4" />
+        <path d="M192 128 q24 10 30 24" strokeWidth="3" opacity={0.6} />
+      </g>
+    </g>
+  );
+}
+
+function HenLayO() {
+  return (
+    <g>
+      <Ground />
+      <ellipse cx="112" cy="86" rx="46" ry="34" fill={FILL} {...stroke} />
+      <circle cx="152" cy="52" r="20" fill={FILL} {...stroke} />
+      <path d="M146 32 q6-16 14 0 q-6 6-14 0z" fill={RED} {...thin} />
+      <circle cx="158" cy="48" r="3.5" fill={L} />
+      <path d="M170 58 l16 4 l-16 7z" fill={AMBER} {...thin} />
+      <path d="M70 76 q-24 10-18 32 q16 4 30-10z" fill={DEEP} {...stroke} />
+      <path d="M100 120 v20 M126 120 v20" {...stroke} />
+      <ellipse cx="176" cy="132" rx="24" ry="30" fill={FILL} {...stroke} />
+      <text x="176" y="144" textAnchor="middle" fontSize="30" fontWeight="700" fill={L}>O</text>
+    </g>
+  );
+}
+
+function Hong({ wang }: ArtProps) {
+  return (
+    <g>
+      <path d="M34 158 v-70 h26 v70z" fill={DEEP} {...stroke} />
+      <path d="M70 158 v-106 h30 v106z" fill={FILL} {...stroke} />
+      <path d="M110 158 v-84 h24 v84z" fill={DEEP} {...stroke} />
+      <path d="M144 158 v-124 h32 v124z" fill={FILL} {...stroke} />
+      <path d="M186 158 v-62 h26 v62z" fill={DEEP} {...stroke} />
+      <g fill={AMBER} opacity={0.85}>
+        <rect x="78" y="66" width="7" height="9" />
+        <rect x="88" y="84" width="7" height="9" />
+        <rect x="152" y="48" width="7" height="9" />
+        <rect x="164" y="70" width="7" height="9" />
+        <rect x="118" y="90" width="7" height="9" />
+      </g>
+      {wang === true ? (
+        <>
+          <rect x="96" y="14" width="80" height="34" rx="3" fill={FILL} {...stroke} transform="rotate(-8 136 31)" />
+          <path d="M136 48 v14" {...thin} />
+          <g stroke={RED} strokeWidth="3" fill="none" strokeLinecap="round">
+            <path d="M186 20 q12-8 20 4" />
+            <path d="M198 6 q18-4 26 10" />
+          </g>
+        </>
+      ) : (
+        <>
+          <path d="M20 158 q40-18 80 0 q40 18 80 0 q34-14 70 2 v10 h-230z" fill={BLUE} opacity={0.5} />
+          <path d="M20 146 q40-16 80 0 q40 16 80 0 q34-14 70 2" fill="none" stroke={BLUE} strokeWidth="4" strokeLinecap="round" />
+        </>
+      )}
+    </g>
+  );
+}
+
+function Jay() {
+  return (
+    <g>
+      <Ground />
+      <circle cx="130" cy="124" r="34" fill={GREEN} {...stroke} />
+      <path d="M104 100 q26-24 52 0" fill="none" {...thin} opacity={0.6} />
+      <path d="M130 90 v-10" {...thin} />
+      <ellipse cx="150" cy="66" rx="34" ry="24" fill={BLUE} {...stroke} />
+      <circle cx="182" cy="46" r="18" fill={BLUE} {...stroke} />
+      <path d="M176 28 l4-16 l10 12z" fill={BLUE} {...stroke} />
+      <circle cx="188" cy="42" r="3.5" fill={L} />
+      <path d="M198 50 l20 4 l-20 7z" fill={L} {...thin} />
+      <path d="M120 70 q-32 6-38 24 q26 4 40-8z" fill={BLUE} {...stroke} />
+    </g>
+  );
+}
+
+function JerryCan() {
+  return (
+    <g>
+      <Ground />
+      <path d="M74 46 h94 q10 0 10 10 v92 q0 10-10 10h-94 q-10 0-10-10v-92 q0-10 10-10z" fill={RED} {...stroke} />
+      <path d="M92 66 v72 M124 60 v78 M156 66 v72" {...thin} opacity={0.45} />
+      <path d="M84 46 q0-14 12-14 h50 q12 0 12 14" fill="none" {...stroke} />
+      <rect x="176" y="52" width="24" height="18" rx="4" fill={DEEP} {...stroke} />
+      <path d="M188 52 v-14 l16-6" {...stroke} />
+    </g>
+  );
+}
+
+function Jot() {
+  return (
+    <g>
+      <Ground />
+      <rect x="46" y="48" width="118" height="106" rx="5" fill={FILL} {...stroke} />
+      <path d="M46 68 h118" {...thin} opacity={0.4} />
+      <circle cx="72" cy="58" r="4" fill={L} />
+      <circle cx="104" cy="58" r="4" fill={L} />
+      <circle cx="136" cy="58" r="4" fill={L} />
+      <path d="M64 106 q34-14 74 6" fill="none" stroke={BLUE} strokeWidth="5" strokeLinecap="round" />
+      <path d="M132 128 L214 40" stroke={L} strokeWidth="10" strokeLinecap="round" />
+      <path d="M212 38 l14-14 l10 10 l-14 14z" fill={AMBER} {...stroke} />
+      <path d="M132 128 l-12 14 l4-20z" fill={L} {...thin} />
+    </g>
+  );
+}
+
+function Kite() {
+  return (
+    <g>
+      <path d="M144 20 L206 62 L162 100 L112 66z" fill={RED} {...stroke} transform="rotate(150 156 60)" />
+      <path d="M150 96 q-26 22-58 20 q-24-2-40 24" fill="none" {...thin} strokeDasharray="6 6" opacity={0.7} />
+      <path d="M152 88 q-8 22-24 30 q10-22 4-34z" fill={AMBER} {...thin} />
+      <path d="M60 152 q-14 6-22-2" {...thin} opacity={0.6} />
+      <path d="M186 30 q10-8 16 2 M204 46 q10-4 14 6" {...thin} opacity={0.5} />
+    </g>
+  );
+}
+
+function MaJack() {
+  return (
+    <g>
+      <Ground />
+      <rect x="98" y="24" width="94" height="52" rx="6" fill={DEEP} {...stroke} />
+      <path d="M110 24 q0-12 12-12 h48 q12 0 12 12" fill="none" {...stroke} />
+      <path d="M118 82 L146 106 L118 130 M172 82 L146 106 L172 130" fill="none" {...stroke} />
+      <path d="M146 106 v-30 M146 106 v42" {...thin} />
+      <path d="M118 148 h56" {...stroke} />
+      <circle cx="60" cy="70" r="22" fill={FILL} {...stroke} />
+      <path d="M38 62 q22-24 44 0 q-4-18-22-18 t-22 18z" fill={DEEP} {...stroke} />
+      <circle cx="53" cy="70" r="3" fill={L} />
+      <circle cx="68" cy="70" r="3" fill={L} />
+      <path d="M42 158 v-40 q0-18 18-18 t18 18 v40" fill={FILL} {...stroke} />
+      <path d="M78 116 L112 118" {...stroke} />
+    </g>
+  );
+}
+
+function Meter() {
+  return (
+    <g>
+      <Ground />
+      <rect x="58" y="46" width="140" height="82" rx="8" fill={DEEP} {...stroke} />
+      <rect x="76" y="62" width="104" height="42" rx="4" fill={L} opacity={0.85} />
+      <text x="128" y="94" textAnchor="middle" fontSize="30" fontWeight="700" fill={AMBER}>35</text>
+      <circle cx="90" cy="116" r="5" fill={RED} />
+      <circle cx="112" cy="116" r="5" fill={GREEN} />
+      <path d="M100 128 v22 M156 128 v22" {...stroke} />
+      <path d="M76 150 h104" {...stroke} opacity={0.5} />
+    </g>
+  );
+}
+
+function Mower({ van }: ArtProps) {
+  if (van === true) {
+    return (
+      <g>
+        <Ground />
+        <path d="M34 132 v-70 h108 l34 34 h30 v36z" fill={FILL} {...stroke} />
+        <path d="M146 74 h22 l18 18 h-40z" fill={BLUE} {...thin} />
+        <path d="M34 62 v70" {...stroke} />
+        <path d="M38 66 h44 v62 h-44z" fill={DEEP} {...thin} />
+        <path d="M92 66 h44 v62 h-44z" fill={DEEP} {...thin} />
+        <path d="M34 132 L4 158 h60z" fill={DEEP} {...stroke} />
+        <circle cx="88" cy="136" r="17" fill={DEEP} {...stroke} />
+        <circle cx="184" cy="136" r="17" fill={DEEP} {...stroke} />
+      </g>
+    );
+  }
+  return (
+    <g>
+      <Ground />
+      <path d="M60 138 v-40 h96 v40z" fill={DEEP} {...stroke} />
+      <path d="M156 118 q34-6 40-34" fill="none" stroke={L} strokeWidth="7" strokeLinecap="round" />
+      <path d="M186 82 h30" {...stroke} />
+      <path d="M56 98 q52-26 104 0z" fill={FILL} {...stroke} />
+      <circle cx="82" cy="146" r="14" fill={FILL} {...stroke} />
+      <circle cx="140" cy="146" r="14" fill={FILL} {...stroke} />
+      <path d="M64 88 q12-12 24-2 M110 84 q12-12 24-2" {...thin} opacity={0.5} />
+      <path d="M28 158 q10-16 18-2 M198 158 q10-16 18-2" stroke={GREEN} strokeWidth="3" fill="none" strokeLinecap="round" />
+    </g>
+  );
+}
+
+function NowWatch() {
+  return (
+    <g>
+      <Ground />
+      <circle cx="118" cy="88" r="48" fill={FILL} {...stroke} />
+      <circle cx="118" cy="88" r="38" fill={DEEP} {...stroke} />
+      <path d="M118 88 V60 M118 88 l24 12" stroke={L} strokeWidth="4" strokeLinecap="round" />
+      <path d="M96 44 v-26 h44 v26 M96 132 v26 h44 v-26" fill={DEEP} {...stroke} />
+      <g stroke={BLUE} strokeWidth="3" strokeLinecap="round" opacity={0.9}>
+        <path d="M84 58 l-12-10 M152 58 l12-10 M84 118 l-12 10 M152 118 l12 10 M118 40 v-12 M118 136 v12" />
+      </g>
+      <path d="M232 96 q-46-8-72 0" stroke={L} strokeWidth="16" strokeLinecap="round" fill="none" />
+      <path d="M166 96 l-14 0" stroke={FILL} strokeWidth="16" strokeLinecap="round" />
+    </g>
+  );
+}
+
+function NumbKanga() {
+  return (
+    <g>
+      <Ground />
+      <path d="M84 158 q-14-50 18-74 q26-20 48-4 q16 14 4 40 q-8 16 6 38z" fill={FILL} {...stroke} />
+      <circle cx="158" cy="60" r="20" fill={FILL} {...stroke} />
+      <path d="M146 42 l-4-20 l14 10z M172 42 l8-18 l-16 8z" fill={FILL} {...stroke} />
+      <circle cx="164" cy="58" r="3.5" fill={L} />
+      <path d="M172 70 q10 14 -2 20 q-10 4-10-10z" fill={BLUE} {...thin} />
+      <path d="M84 158 q-40 6-52-14" fill="none" {...stroke} />
+      <rect x="182" y="102" width="40" height="40" rx="5" fill={BLUE} opacity={0.6} {...stroke} />
+      <path d="M190 112 l10 10 M212 110 l-12 14" stroke={FILL} strokeWidth="3" strokeLinecap="round" />
+      <path d="M156 124 L182 122" {...stroke} />
+    </g>
+  );
+}
+
+function One() {
+  return (
+    <g>
+      <Ground />
+      <path d="M96 54 L134 30 v118" stroke={L} strokeWidth="18" fill="none" strokeLinecap="round" strokeLinejoin="round" />
+      <path d="M96 148 h78" stroke={AMBER} strokeWidth="12" strokeLinecap="round" />
+    </g>
+  );
+}
+
+function Owl() {
+  return (
+    <g>
+      <Ground />
+      <ellipse cx="130" cy="106" rx="52" ry="56" fill={FILL} {...stroke} />
+      <path d="M84 62 l6-26 l24 16z M176 62 l-6-26 l-24 16z" fill={FILL} {...stroke} />
+      <circle cx="108" cy="88" r="20" fill={DEEP} {...stroke} />
+      <circle cx="152" cy="88" r="20" fill={DEEP} {...stroke} />
+      <path d="M94 88 h28 M138 88 h28" stroke={L} strokeWidth="4" strokeLinecap="round" />
+      <path d="M130 100 l-9 14 h18z" fill={AMBER} {...thin} />
+      <path d="M104 132 q26 14 52 0" {...thin} opacity={0.5} />
+      <path d="M112 162 h-14 M148 162 h14" {...stroke} />
+      <path d="M188 56 q12-10 20 2" {...thin} opacity={0.6} />
+    </g>
+  );
+}
+
+function Pa() {
+  return (
+    <g>
+      <Ground />
+      <circle cx="132" cy="66" r="28" fill={FILL} {...stroke} />
+      <path d="M100 50 h64 q4-20-32-20 t-32 20z" fill={DEEP} {...stroke} />
+      <path d="M100 50 h-18" {...stroke} />
+      <circle cx="123" cy="66" r="3.5" fill={L} />
+      <circle cx="143" cy="66" r="3.5" fill={L} />
+      <path d="M122 82 h20" {...thin} />
+      <path d="M100 158 v-42 q0-22 32-22 t32 22 v42" fill={FILL} {...stroke} />
+      <path d="M100 118 q32 20 64 0" fill="none" {...stroke} />
+      <path d="M108 130 h48" {...thin} opacity={0.4} />
+    </g>
+  );
+}
+
+function PalmTree() {
+  return (
+    <g>
+      <path d="M28 158 h214" {...stroke} opacity={0.4} />
+      <circle cx="60" cy="52" r="26" fill={AMBER} opacity={0.6} />
+      <path d="M158 158 q-14-58 6-96" fill="none" stroke={DEEP} strokeWidth="12" strokeLinecap="round" />
+      <path d="M162 74 q-4-8-2-14" {...thin} opacity={0.5} />
+      <g fill={GREEN} stroke={L} strokeWidth="2" strokeLinejoin="round">
+        <path d="M164 60 q-40-16-58 6 q34-2 58-6z" />
+        <path d="M164 60 q-22-38-52-34 q28 12 52 34z" />
+        <path d="M166 60 q34-28 62-12 q-34 0-62 12z" />
+        <path d="M166 60 q28 8 36 32 q-18-20-36-32z" />
+        <path d="M164 58 q4-30 26-40 q-14 22-26 40z" />
+      </g>
+      <circle cx="164" cy="60" r="6" fill={DEEP} {...thin} />
+    </g>
+  );
+}
+
+function Pendulum() {
+  return (
+    <g>
+      <path d="M78 14 h84 v144 h-84z" fill={FILL} {...stroke} />
+      <circle cx="120" cy="46" r="20" fill={DEEP} {...stroke} />
+      <path d="M120 46 v-12 M120 46 l10 6" stroke={L} strokeWidth="3" strokeLinecap="round" />
+      <path d="M120 66 L166 126" {...stroke} />
+      <circle cx="170" cy="132" r="16" fill={AMBER} {...stroke} />
+      <path d="M120 66 L74 126" fill="none" {...thin} strokeDasharray="5 5" opacity={0.4} />
+      <g stroke={L} strokeWidth="3" fill="none" strokeLinecap="round" opacity={0.6}>
+        <path d="M192 108 q10-6 16 2" />
+        <path d="M200 92 q14-6 20 4" />
+      </g>
+    </g>
+  );
+}
+
+function PigMoo() {
+  return (
+    <g>
+      <Ground />
+      <ellipse cx="112" cy="116" rx="50" ry="34" fill={PINK} {...stroke} />
+      <circle cx="164" cy="88" r="26" fill={PINK} {...stroke} />
+      <path d="M148 66 l-6-16 l18 6z M182 66 l6-16 l-18 6z" fill={PINK} {...stroke} />
+      <circle cx="158" cy="84" r="3.5" fill={L} />
+      <ellipse cx="184" cy="96" rx="12" ry="9" fill={RED} {...stroke} />
+      <circle cx="180" cy="96" r="2" fill={L} />
+      <circle cx="188" cy="96" r="2" fill={L} />
+      <path d="M64 108 q-16 6-8 20" fill="none" {...stroke} />
+      <path d="M92 148 v12 M132 150 v10" {...stroke} />
+      <path d="M218 78 v-30" {...stroke} />
+      <ellipse cx="218" cy="40" rx="14" ry="20" fill={DEEP} {...stroke} />
+      <path d="M204 108 q12-10 18 0" {...thin} opacity={0.6} />
+      <path d="M198 62 q10-8 16 0" {...thin} opacity={0.5} />
+    </g>
+  );
+}
+
+function Plough() {
+  return (
+    <g>
+      <path d="M20 116 q56-14 112 0 q56 14 108 0" fill="none" {...stroke} opacity={0.4} />
+      <path d="M20 138 q56-14 112 0 q56 14 108 0" fill="none" {...stroke} opacity={0.4} />
+      <path d="M20 160 q56-14 112 0 q56 14 108 0" fill="none" {...stroke} opacity={0.4} />
+      <path d="M108 34 L152 96" stroke={L} strokeWidth="8" strokeLinecap="round" />
+      <path d="M108 34 q-26-8-34 6" fill="none" {...stroke} />
+      <path d="M152 96 q30 8 30 34 l-46 6 q-16-24 16-40z" fill={DEEP} {...stroke} />
+      <circle cx="98" cy="112" r="20" fill={FILL} {...stroke} />
+      <path d="M118 106 L142 92" {...stroke} />
+    </g>
+  );
+}
+
+function RapBat() {
+  return (
+    <g>
+      <Ground />
+      <circle cx="98" cy="70" r="28" fill={FILL} {...stroke} />
+      <path d="M66 58 h64 v-8 q0-16-32-16 t-32 16z" fill={DEEP} {...stroke} />
+      <path d="M130 50 h22" {...stroke} />
+      <circle cx="90" cy="70" r="3.5" fill={L} />
+      <circle cx="108" cy="70" r="3.5" fill={L} />
+      <ellipse cx="100" cy="86" rx="11" ry="9" fill={L} />
+      <path d="M70 158 v-42 q0-22 28-22 t28 22 v42" fill={FILL} {...stroke} />
+      <path d="M126 116 L162 96" {...stroke} />
+      <path d="M162 96 q32-38 58-56 q14-8 16 8 q2 16-34 40 q-28 18-40 8z" fill={AMBER} {...stroke} />
+      <g stroke={L} strokeWidth="2.5" fill="none" strokeLinecap="round" opacity={0.55}>
+        <path d="M56 60 q-12-8-12-20" />
+        <path d="M44 78 q-16-4-20-16" />
+      </g>
+    </g>
+  );
+}
+
+function RashPear() {
+  return (
+    <g>
+      <Ground />
+      <path d="M132 40 q10 22 24 38 q22 26 6 52 q-16 26-46 26 q-30 0-44-24 q-14-26 8-52 q18-20 22-40z" fill={GREEN} {...stroke} />
+      <path d="M132 40 v-20" {...stroke} />
+      <path d="M132 26 q22-14 34 2 q-22 10-34-2z" fill={GREEN} {...stroke} />
+      <g fill={RED}>
+        <circle cx="106" cy="96" r="6" />
+        <circle cx="132" cy="112" r="7" />
+        <circle cx="118" cy="132" r="5" />
+        <circle cx="150" cy="94" r="5" />
+        <circle cx="146" cy="130" r="6" />
+        <circle cx="96" cy="122" r="4" />
+      </g>
+    </g>
+  );
+}
+
+function Rev() {
+  return (
+    <g>
+      <Ground />
+      <path d="M96 96 h96" stroke={L} strokeWidth="14" strokeLinecap="round" />
+      <rect x="150" y="80" width="52" height="32" rx="14" fill={DEEP} {...stroke} />
+      <path d="M162 80 v32 M176 80 v32 M190 80 v32" {...thin} opacity={0.45} />
+      <path d="M96 96 q-16-4-16-20" fill="none" {...stroke} />
+      <path d="M204 96 q18 0 22 14" fill="none" {...stroke} />
+      <g stroke={AMBER} strokeWidth="4" fill="none" strokeLinecap="round">
+        <path d="M60 66 h-38 M70 96 h-50 M60 126 h-38" />
+      </g>
+      <g stroke={L} strokeWidth="3" fill="none" strokeLinecap="round" opacity={0.5}>
+        <path d="M208 60 q12-10 8-22" />
+        <path d="M224 74 q16-6 18-20" />
+      </g>
+    </g>
+  );
+}
+
+function RotApple() {
+  return (
+    <g>
+      <Ground />
+      <path d="M130 54 q34-14 50 12 q16 26-2 58 q-16 28-48 26 q-32 2-48-26 q-18-32-2-58 q16-26 50-12z" fill={RED} {...stroke} />
+      <path d="M130 54 v-20 q0-10 12-14" fill="none" {...stroke} />
+      <path d="M142 34 q22-12 30 4 q-20 10-30-4z" fill={GREEN} {...thin} />
+      <path d="M96 100 q22-16 40 4 q18 20 4 40 q-24 12-42-8 q-14-18-2-36z" fill={DEEP} opacity={0.85} />
+      <path d="M148 82 q14 8 12 22" {...thin} opacity={0.5} />
+      <path d="M74 154 q18 8 34 4" {...thin} opacity={0.4} />
+    </g>
+  );
+}
+
+function Songbird() {
+  return (
+    <g>
+      <Ground />
+      <ellipse cx="106" cy="112" rx="38" ry="28" fill={AMBER} {...stroke} />
+      <circle cx="142" cy="86" r="20" fill={AMBER} {...stroke} />
+      <circle cx="148" cy="82" r="3.5" fill={L} />
+      <path d="M160 90 l20 6 l-20 6z" fill={DEEP} {...stroke} />
+      <path d="M84 100 q-26-12-40 6 q20 6 32 16z" fill={DEEP} {...stroke} />
+      <path d="M76 132 q-28 10-32 26" fill="none" {...stroke} />
+      <path d="M104 140 v16 M122 140 v16" {...stroke} />
+      <path d="M60 158 h140" {...stroke} opacity={0.4} />
+      <g stroke={L} strokeWidth="3" fill="none">
+        <path d="M196 62 v-30 l16-6 v30" />
+        <circle cx="192" cy="64" r="6" fill={L} />
+        <circle cx="208" cy="58" r="6" fill={L} />
+        <path d="M226 96 v-22" />
+        <circle cx="222" cy="98" r="5" fill={L} />
+      </g>
+    </g>
+  );
+}
+
+function Spring() {
+  return (
+    <g>
+      <Ground />
+      <path
+        d="M64 148 q64-16 0-30 q64-16 0-30 q64-16 0-30 q54-14 20-28"
+        fill="none"
+        {...stroke}
+        strokeWidth="6"
+      />
+      <path d="M40 158 h58" {...stroke} />
+      <path d="M96 32 l24-18 M112 44 l30-10" {...thin} opacity={0.6} />
+      <path d="M152 30 q12-10 20 2 M170 12 q14-4 18 8" {...thin} opacity={0.55} />
+      <path d="M196 44 l14-12 l6 16z" fill={AMBER} {...thin} />
+    </g>
+  );
+}
+
+function TapeMeasure() {
+  return (
+    <g>
+      <Ground />
+      <rect x="24" y="76" width="52" height="48" rx="8" fill={RED} {...stroke} />
+      <circle cx="50" cy="100" r="12" fill={FILL} {...stroke} />
+      <path d="M76 90 h158 v22 h-158z" fill={AMBER} {...stroke} />
+      <g stroke={L} strokeWidth="2" strokeLinecap="round">
+        <path d="M96 90 v12 M116 90 v8 M136 90 v12 M156 90 v8 M176 90 v12 M196 90 v8 M216 90 v12" />
+      </g>
+      <path d="M234 84 v34" {...stroke} />
+    </g>
+  );
+}
+
+function Taxi() {
+  return (
+    <g>
+      <Ground />
+      <path d="M32 132 v-28 h30 l24-32 h96 l20 32 h32 v28z" fill={AMBER} {...stroke} />
+      <path d="M92 78 h34 v26 h-52z" fill={BLUE} {...thin} />
+      <path d="M138 78 h32 l16 26 h-48z" fill={BLUE} {...thin} />
+      <rect x="98" y="50" width="60" height="20" rx="5" fill={FILL} {...stroke} />
+      <text x="128" y="66" textAnchor="middle" fontSize="15" fontWeight="700" fill={L}>TAXI</text>
+      <circle cx="74" cy="134" r="18" fill={DEEP} {...stroke} />
+      <circle cx="184" cy="134" r="18" fill={DEEP} {...stroke} />
+      <path d="M96 116 h68" {...thin} opacity={0.45} />
+    </g>
+  );
+}
+
+function TeaSpot() {
+  return (
+    <g>
+      <Ground />
+      <path d="M70 62 h84 l-10 60 h-64z" fill={FILL} {...stroke} />
+      <path d="M154 76 q28 2 28 20 q0 18-26 20" fill="none" {...stroke} />
+      <ellipse cx="112" cy="62" rx="42" ry="9" fill={AMBER} {...stroke} />
+      <ellipse cx="112" cy="128" rx="56" ry="12" fill={FILL} {...stroke} />
+      <path d="M86 40 q6-14 16-6 M118 36 q6-16 16-6" {...thin} opacity={0.6} />
+      <path d="M56 138 L92 158 M92 138 L56 158" stroke={RED} strokeWidth="6" strokeLinecap="round" />
+      <path d="M148 140 L184 158 M184 140 L148 158" stroke={RED} strokeWidth="6" strokeLinecap="round" opacity={0.5} />
+    </g>
+  );
+}
+
+function Thong() {
+  return (
+    <g>
+      <Ground />
+      <path d="M70 148 q-14-52 12-88 q22-30 48-6 q22 22 8 62 q-8 24-34 32 q-26 6-34 0z" fill={BLUE} {...stroke} />
+      <path d="M96 62 q22-24 40-2" fill="none" stroke={L} strokeWidth="6" strokeLinecap="round" />
+      <path d="M118 60 v18" stroke={L} strokeWidth="6" strokeLinecap="round" />
+      <path d="M148 68 l22-14 M156 84 l26 4" stroke={RED} strokeWidth="4" strokeLinecap="round" />
+      <path d="M186 60 q18-10 26 4 q-18 8-26-4z" fill={BLUE} {...thin} />
+    </g>
+  );
+}
+
+function Tick() {
+  return (
+    <g>
+      <Ground />
+      <ellipse cx="132" cy="106" rx="44" ry="36" fill={DEEP} {...stroke} />
+      <circle cx="132" cy="66" r="18" fill={DEEP} {...stroke} />
+      <circle cx="126" cy="62" r="3" fill={L} />
+      <circle cx="140" cy="62" r="3" fill={L} />
+      <path d="M132 48 v-12" {...thin} />
+      <g stroke={L} strokeWidth="4" fill="none" strokeLinecap="round">
+        <path d="M92 86 L60 66 M88 106 L52 104 M94 128 L62 144" />
+        <path d="M172 86 L204 66 M176 106 L212 104 M170 128 L202 144" />
+      </g>
+      <path d="M124 96 q8 10 16 0" {...thin} opacity={0.5} />
+      <path d="M30 158 h204" {...stroke} opacity={0.35} />
+    </g>
+  );
+}
+
+function TinyKnit() {
+  return (
+    <g>
+      <Ground />
+      <path d="M28 140 q54-14 108 0 q54 14 106 0" fill="none" {...stroke} opacity={0.3} />
+      <rect x="108" y="84" width="46" height="42" rx="4" fill={PINK} {...stroke} />
+      <g stroke={L} strokeWidth="1.5" opacity={0.6}>
+        <path d="M108 96 h46 M108 108 h46 M108 120 h46 M120 84 v42 M132 84 v42 M142 84 v42" />
+      </g>
+      <path d="M96 76 L172 130" stroke={L} strokeWidth="4" strokeLinecap="round" />
+      <path d="M100 130 L176 78" stroke={L} strokeWidth="4" strokeLinecap="round" />
+      <circle cx="94" cy="74" r="5" fill={AMBER} />
+      <circle cx="178" cy="76" r="5" fill={AMBER} />
+    </g>
+  );
+}
+
+function Tongs() {
+  return (
+    <g>
+      <Ground />
+      <path d="M212 46 q-84 24-128 46 q-14 8-2 18 q12 8 30-2 q40-22 100-38" fill="none" {...stroke} strokeWidth="7" />
+      <path d="M212 70 q-84 24-124 42" fill="none" {...stroke} strokeWidth="7" />
+      <path d="M212 46 q16-4 16 8 q0 12-16 16z" fill={FILL} {...stroke} />
+      <path d="M64 96 q-16 6-14 20 q2 12 18 8" fill="none" {...stroke} />
+      <path d="M66 122 q10 10 22 4" fill="none" {...thin} opacity={0.5} />
+      <path d="M232 96 q10-6 14 4 M228 116 q12-2 14 8" {...thin} opacity={0.5} />
+    </g>
+  );
+}
+
+function TookBargain() {
+  return (
+    <g>
+      <Ground />
+      <path d="M20 60 h100 v10 h-100z" fill={DEEP} {...stroke} />
+      <path d="M36 70 v18 M104 70 v18" {...thin} opacity={0.5} />
+      <path
+        d="M188 152 v-40 q-14-8-8-22 q6-12 18-4 l6 8 v-24 q0-12 12-12 t12 12 v20"
+        fill={FILL}
+        {...stroke}
+        transform="translate(-70 -10)"
+      />
+      <rect x="96" y="86" width="52" height="38" rx="5" fill={AMBER} {...stroke} />
+      <path d="M148 96 l24-10 l4 26 l-26 4z" fill={AMBER} {...stroke} />
+      <circle cx="164" cy="96" r="4" fill={L} />
+      <path d="M164 96 L196 76" {...thin} />
+      <path d="M100 100 h30 M100 112 h20" {...thin} opacity={0.45} />
+    </g>
+  );
+}
+
+function TornNote() {
+  return (
+    <g>
+      <Ground />
+      <path d="M24 62 h96 l-10 12 l10 12 l-10 12 l10 12 l-10 12 l10 12 h-96z" fill={GREEN} {...stroke} opacity={0.85} />
+      <path d="M150 62 h96 v72 h-96 l10-12 l-10-12 l10-12 l-10-12 l10-12z" fill={GREEN} {...stroke} opacity={0.85} />
+      <circle cx="66" cy="98" r="18" fill="none" {...thin} opacity={0.6} />
+      <circle cx="204" cy="98" r="18" fill="none" {...thin} opacity={0.6} />
+      <path d="M40 76 h16 M40 120 h16 M214 76 h16 M214 120 h16" {...thin} opacity={0.5} />
+    </g>
+  );
+}
+
+function WetPhone() {
+  return (
+    <g>
+      <path d="M20 128 q56-16 112 0 q56 16 108 0 v40 h-220z" fill={BLUE} opacity={0.45} />
+      <path d="M20 128 q56-16 112 0 q56 16 108 0" fill="none" stroke={BLUE} strokeWidth="4" strokeLinecap="round" />
+      <rect x="82" y="46" width="86" height="96" rx="10" fill={DEEP} {...stroke} transform="rotate(-9 125 94)" />
+      <rect x="92" y="60" width="66" height="68" rx="4" fill={FILL} {...thin} transform="rotate(-9 125 94)" />
+      <g stroke={BLUE} strokeWidth="3" fill="none" strokeLinecap="round">
+        <path d="M104 66 q6 20 0 40" />
+        <path d="M124 62 q8 24 2 46" />
+        <path d="M146 70 q6 18 0 34" />
+      </g>
+      <ellipse cx="126" cy="148" rx="52" ry="9" fill="none" stroke={BLUE} strokeWidth="3" opacity={0.7} />
+      <path d="M196 40 q6 12-2 16 M212 60 q8 10 0 16" stroke={BLUE} strokeWidth="3" fill="none" strokeLinecap="round" />
+    </g>
+  );
+}
+
+function WrongX() {
+  return (
+    <g>
+      <rect x="62" y="18" width="146" height="150" rx="5" fill={FILL} {...stroke} />
+      <g stroke={L} strokeWidth="2" opacity={0.35}>
+        <path d="M78 48 h114 M78 70 h114 M78 92 h80 M78 114 h100 M78 136 h60" />
+      </g>
+      <path d="M74 44 L206 148 M206 44 L74 148" stroke={RED} strokeWidth="14" strokeLinecap="round" />
+    </g>
+  );
+}
+
 /* ------------------------------------------------------------------ registry */
 
 /**
@@ -1025,12 +1947,71 @@ export const ART: Record<string, (props: ArtProps) => JSX.Element> = {
   BigEye,
   TinyLeg,
   Pirate,
-  // Same drawing, two props. Registered under both names so the phrase data can
-  // stay readable at the call site.
+  AnTile,
+  BagTongue,
+  Barn,
+  BootMud,
+  BurntMatch,
+  Cheer,
+  Chew,
+  ChewyStuck,
+  ChowKeys,
+  ClockMoan,
+  CoinBat,
+  Dawn,
+  DoughSink,
+  EngineBlock,
+  FeltMark,
+  FullImp,
+  GinGlass,
+  Glub,
+  Gong,
+  GuyHen,
+  HelmetSigh,
+  HenLayO,
+  Jay,
+  JerryCan,
+  Jot,
+  Kite,
+  MaJack,
+  Meter,
+  Mower,
+  NowWatch,
+  NumbKanga,
+  One,
+  Owl,
+  Pa,
+  PalmTree,
+  Pendulum,
+  PigMoo,
+  Plough,
+  RapBat,
+  RashPear,
+  Rev,
+  RotApple,
+  Songbird,
+  Spring,
+  TapeMeasure,
+  Taxi,
+  TeaSpot,
+  Thong,
+  Tick,
+  TinyKnit,
+  Tongs,
+  TookBargain,
+  TornNote,
+  WetPhone,
+  WrongX,
+  // Same drawing, different prop. Registered under both names so the phrase
+  // data stays readable at the call site.
   PuffFlag: (p: ArtProps) => Puff({ ...p, flag: true }),
   PirateBarn: (p: ArtProps) => Pirate({ ...p, barn: true }),
   PrawnGrill: (p: ArtProps) => Prawn({ ...p, pot: false }),
   PrawnPot: (p: ArtProps) => Prawn({ ...p, pot: true }),
+  AnKnee: (p: ArtProps) => AnTile({ ...p, onKnee: true }),
+  HongWater: (p: ArtProps) => Hong({ ...p, wang: false }),
+  HongWang: (p: ArtProps) => Hong({ ...p, wang: true }),
+  Van: (p: ArtProps) => Mower({ ...p, van: true }),
 };
 
 export function hasArt(component: string): boolean {
