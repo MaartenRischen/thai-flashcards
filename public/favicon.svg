@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Thai Mnemonic Flashcards">
+  <rect width="64" height="64" rx="14" fill="#0f0e0c"/>
+  <line x1="12" y1="32" x2="52" y2="32" stroke="#faf7f0" stroke-width="2" stroke-dasharray="4 4" opacity="0.3"/>
+  <path d="M12 18 L23 17 L52 44" fill="none" stroke="#e0a53b" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M12 46 L28 50 L52 54" fill="none" stroke="#639922" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" opacity="0.85"/>
+</svg>

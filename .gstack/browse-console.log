@@ -1,0 +1,22 @@
+[2026-08-13T09:16:33.363Z] [debug] [vite] connecting...
+[2026-08-13T09:16:33.369Z] [debug] [vite] connected.
+[2026-08-13T09:16:33.422Z] [info] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[2026-08-13T09:16:51.714Z] [debug] [vite] hot updated: /src/index.css
+[2026-08-13T09:16:51.714Z] [debug] [vite] invalidate /src/art/index.tsx: Could not Fast Refresh ("hasArt" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+[2026-08-13T09:16:51.714Z] [debug] [vite] hot updated: /src/art/index.tsx
+[2026-08-13T09:16:51.722Z] [debug] [vite] hot updated: /src/components/Panel.tsx
+[2026-08-13T09:16:53.320Z] [debug] [vite] connecting...
+[2026-08-13T09:16:53.346Z] [debug] [vite] connected.
+[2026-08-13T09:16:53.348Z] [info] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[2026-08-13T09:18:07.620Z] [debug] [vite] connecting...
+[2026-08-13T09:18:07.649Z] [debug] [vite] connected.
+[2026-08-13T09:18:07.651Z] [info] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[2026-08-13T09:18:09.936Z] [debug] [vite] connecting...
+[2026-08-13T09:18:09.937Z] [debug] [vite] connected.
+[2026-08-13T09:18:09.961Z] [info] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[2026-08-13T09:27:30.746Z] [debug] [vite] connecting...
+[2026-08-13T09:27:30.752Z] [debug] [vite] connected.
+[2026-08-13T09:27:30.807Z] [info] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[2026-08-13T09:28:26.787Z] [debug] [vite] connecting...
+[2026-08-13T09:28:26.788Z] [debug] [vite] connected.
+[2026-08-13T09:28:26.816Z] [info] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold

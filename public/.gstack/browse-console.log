@@ -1,0 +1,188 @@
+[2026-08-13T07:39:11.309Z] [debug] [vite] connecting...
+[2026-08-13T07:39:11.313Z] [debug] [vite] connected.
+[2026-08-13T07:39:11.343Z] [info] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[2026-08-13T07:39:54.518Z] [debug] [vite] hot updated: /src/index.css
+[2026-08-13T07:39:54.518Z] [debug] [vite] hot updated: /src/components/Panel.tsx
+[2026-08-13T07:40:24.099Z] [debug] [vite] hot updated: /src/index.css
+[2026-08-13T07:40:24.099Z] [debug] [vite] invalidate /src/store.tsx: Could not Fast Refresh ("useStore" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+[2026-08-13T07:40:24.099Z] [debug] [vite] hot updated: /src/store.tsx
+[2026-08-13T07:40:24.099Z] [debug] [vite] hot updated: /src/screens/Review.tsx
+[2026-08-13T07:40:24.099Z] [debug] [vite] hot updated: /src/screens/Settings.tsx
+[2026-08-13T07:40:24.099Z] [debug] [vite] hot updated: /src/components/AudioButton.tsx
+[2026-08-13T07:40:24.123Z] [warning] %s
+
+%s
+ An error occurred in the <Shell> component. Consider adding an error boundary to your tree to customize error handling behavior.
+Visit https://react.dev/link/error-boundaries to learn more about error boundaries.
+[2026-08-13T07:40:24.128Z] [debug] [vite] hot updated: /src/App.tsx
+[2026-08-13T07:40:24.128Z] [debug] [vite] hot updated: /src/screens/Review.tsx
+[2026-08-13T07:40:24.128Z] [debug] [vite] hot updated: /src/screens/Browse.tsx
+[2026-08-13T07:40:24.128Z] [debug] [vite] hot updated: /src/screens/Settings.tsx
+[2026-08-13T07:40:24.128Z] [debug] [vite] hot updated: /src/components/AudioButton.tsx
+[2026-08-13T07:40:24.128Z] [debug] [vite] hot updated: /src/components/CardFace.tsx
+[2026-08-13T07:40:52.178Z] [debug] [vite] hot updated: /src/index.css
+[2026-08-13T07:40:52.178Z] [debug] [vite] invalidate /src/store.tsx: Could not Fast Refresh ("useStore" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+[2026-08-13T07:40:52.178Z] [debug] [vite] hot updated: /src/store.tsx
+[2026-08-13T07:40:52.178Z] [debug] [vite] hot updated: /src/screens/Review.tsx
+[2026-08-13T07:40:52.178Z] [debug] [vite] hot updated: /src/screens/Settings.tsx
+[2026-08-13T07:40:52.178Z] [debug] [vite] hot updated: /src/components/AudioButton.tsx
+[2026-08-13T07:40:52.196Z] [warning] %s
+
+%s
+ An error occurred in the <Shell> component. Consider adding an error boundary to your tree to customize error handling behavior.
+Visit https://react.dev/link/error-boundaries to learn more about error boundaries.
+[2026-08-13T07:40:52.203Z] [debug] [vite] hot updated: /src/App.tsx
+[2026-08-13T07:40:52.203Z] [debug] [vite] hot updated: /src/screens/Review.tsx
+[2026-08-13T07:40:52.204Z] [debug] [vite] hot updated: /src/screens/Browse.tsx
+[2026-08-13T07:40:52.204Z] [debug] [vite] hot updated: /src/screens/Settings.tsx
+[2026-08-13T07:40:52.204Z] [debug] [vite] hot updated: /src/components/AudioButton.tsx
+[2026-08-13T07:40:52.204Z] [debug] [vite] hot updated: /src/components/CardFace.tsx
+[2026-08-13T07:42:43.927Z] [debug] [vite] hot updated: /src/index.css
+[2026-08-13T07:42:53.521Z] [debug] [vite] hot updated: /src/index.css
+[2026-08-13T07:42:58.373Z] [debug] [vite] hot updated: /src/index.css
+[2026-08-13T07:42:58.373Z] [debug] [vite] invalidate /src/components/ToneContour.tsx: Could not Fast Refresh (new export)
+[2026-08-13T07:42:58.373Z] [debug] [vite] hot updated: /src/components/ToneContour.tsx
+[2026-08-13T07:42:58.389Z] [debug] [vite] hot updated: /src/screens/TonePrimer.tsx
+[2026-08-13T07:42:58.389Z] [debug] [vite] hot updated: /src/screens/Browse.tsx
+[2026-08-13T07:42:58.389Z] [debug] [vite] hot updated: /src/components/CardFace.tsx
+[2026-08-13T07:43:03.628Z] [debug] [vite] hot updated: /src/index.css
+[2026-08-13T07:43:03.628Z] [debug] [vite] invalidate /src/components/ToneContour.tsx: Could not Fast Refresh ("TONE_ORDER" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+[2026-08-13T07:43:03.628Z] [debug] [vite] hot updated: /src/components/ToneContour.tsx
+[2026-08-13T07:43:03.637Z] [debug] [vite] hot updated: /src/screens/TonePrimer.tsx
+[2026-08-13T07:43:03.637Z] [debug] [vite] hot updated: /src/screens/Browse.tsx
+[2026-08-13T07:43:03.637Z] [debug] [vite] hot updated: /src/components/CardFace.tsx
+[2026-08-13T07:43:08.270Z] [debug] [vite] hot updated: /src/index.css
+[2026-08-13T07:43:08.270Z] [debug] [vite] invalidate /src/components/ToneContour.tsx: Could not Fast Refresh ("TONE_ORDER" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+[2026-08-13T07:43:08.270Z] [debug] [vite] hot updated: /src/components/ToneContour.tsx
+[2026-08-13T07:43:08.279Z] [debug] [vite] hot updated: /src/screens/TonePrimer.tsx
+[2026-08-13T07:43:08.279Z] [debug] [vite] hot updated: /src/screens/Browse.tsx
+[2026-08-13T07:43:08.279Z] [debug] [vite] hot updated: /src/components/CardFace.tsx
+[2026-08-13T07:43:12.608Z] [debug] [vite] hot updated: /src/screens/TonePrimer.tsx
+[2026-08-13T07:43:12.608Z] [debug] [vite] hot updated: /src/index.css
+[2026-08-13T07:43:16.554Z] [debug] [vite] hot updated: /src/screens/TonePrimer.tsx
+[2026-08-13T07:43:16.554Z] [debug] [vite] hot updated: /src/index.css
+[2026-08-13T07:43:25.258Z] [debug] [vite] hot updated: /src/screens/Browse.tsx
+[2026-08-13T07:43:25.258Z] [debug] [vite] hot updated: /src/index.css
+[2026-08-13T07:43:25.263Z] [debug] [vite] hot updated: /src/screens/Settings.tsx
+[2026-08-13T07:43:25.264Z] [debug] [vite] hot updated: /src/index.css
+[2026-08-13T07:43:25.276Z] [debug] [vite] hot updated: /src/screens/Review.tsx
+[2026-08-13T07:43:25.276Z] [debug] [vite] hot updated: /src/index.css
+[2026-08-13T07:43:25.289Z] [debug] [vite] hot updated: /src/index.css
+[2026-08-13T07:43:25.289Z] [debug] [vite] hot updated: /src/components/CardFace.tsx
+[2026-08-13T07:43:38.518Z] [debug] [vite] hot updated: /src/index.css
+[2026-08-13T07:43:44.016Z] [debug] [vite] connecting...
+[2026-08-13T07:43:44.042Z] [debug] [vite] connected.
+[2026-08-13T07:43:44.042Z] [info] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[2026-08-13T07:44:10.532Z] [debug] [vite] connecting...
+[2026-08-13T07:44:10.533Z] [debug] [vite] connected.
+[2026-08-13T07:44:10.560Z] [info] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[2026-08-13T07:44:57.274Z] [error] Failed to load resource: the server responded with a status of 500 (Internal Server Error)
+[2026-08-13T07:44:57.274Z] [error] [vite] Failed to reload /src/components/CardFace.tsx. This could be due to syntax errors or importing non-existent modules. (see errors above)
+[2026-08-13T07:44:57.284Z] [debug] [vite] hot updated: /src/index.css
+[2026-08-13T07:44:57.284Z] [debug] [vite] hot updated: /src/components/CardFace.tsx
+[2026-08-13T07:45:02.057Z] [debug] [vite] hot updated: /src/index.css
+[2026-08-13T07:45:02.057Z] [debug] [vite] hot updated: /src/components/CardFace.tsx
+[2026-08-13T07:45:34.697Z] [debug] [vite] connecting...
+[2026-08-13T07:45:34.703Z] [debug] [vite] connected.
+[2026-08-13T07:45:34.726Z] [info] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[2026-08-13T07:45:35.912Z] [debug] [vite] connecting...
+[2026-08-13T07:45:35.913Z] [debug] [vite] connected.
+[2026-08-13T07:45:35.939Z] [info] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[2026-08-13T07:47:28.511Z] [debug] [vite] hot updated: /src/index.css
+[2026-08-13T07:47:28.511Z] [debug] [vite] hot updated: /src/components/AudioButton.tsx
+[2026-08-13T07:47:35.524Z] [debug] [vite] hot updated: /src/App.tsx
+[2026-08-13T07:47:35.524Z] [debug] [vite] hot updated: /src/index.css
+[2026-08-13T07:47:48.320Z] [debug] [vite] hot updated: /src/App.tsx
+[2026-08-13T07:47:48.320Z] [debug] [vite] hot updated: /src/index.css
+[2026-08-13T07:47:53.303Z] [debug] [vite] hot updated: /src/index.css
+[2026-08-13T07:47:53.303Z] [debug] [vite] hot updated: /src/components/CardFace.tsx
+[2026-08-13T07:47:53.316Z] [debug] [vite] hot updated: /src/screens/Settings.tsx
+[2026-08-13T07:47:53.317Z] [debug] [vite] hot updated: /src/index.css
+[2026-08-13T07:47:53.327Z] [debug] [vite] hot updated: /src/screens/Browse.tsx
+[2026-08-13T07:47:53.327Z] [debug] [vite] hot updated: /src/index.css
+[2026-08-13T07:48:02.054Z] [debug] [vite] hot updated: /src/screens/Settings.tsx
+[2026-08-13T07:48:02.054Z] [debug] [vite] hot updated: /src/index.css
+[2026-08-13T07:48:02.069Z] [debug] [vite] hot updated: /src/screens/Browse.tsx
+[2026-08-13T07:48:02.069Z] [debug] [vite] hot updated: /src/index.css
+[2026-08-13T07:48:02.071Z] [debug] [vite] hot updated: /src/index.css
+[2026-08-13T07:48:02.071Z] [debug] [vite] hot updated: /src/components/CardFace.tsx
+[2026-08-13T07:48:02.085Z] [debug] [vite] hot updated: /src/App.tsx
+[2026-08-13T07:48:02.085Z] [debug] [vite] hot updated: /src/index.css
+[2026-08-13T07:48:02.086Z] [debug] [vite] hot updated: /src/screens/Review.tsx
+[2026-08-13T07:48:02.086Z] [debug] [vite] hot updated: /src/index.css
+[2026-08-13T07:48:11.009Z] [debug] [vite] connecting...
+[2026-08-13T07:48:11.034Z] [debug] [vite] connected.
+[2026-08-13T07:48:11.035Z] [info] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[2026-08-13T07:48:12.319Z] [debug] [vite] connecting...
+[2026-08-13T07:48:12.341Z] [debug] [vite] connected.
+[2026-08-13T07:48:12.344Z] [info] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[2026-08-13T07:50:00.100Z] [debug] [vite] connecting...
+[2026-08-13T07:50:00.101Z] [debug] [vite] connected.
+[2026-08-13T07:50:00.102Z] [info] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[2026-08-13T07:50:09.051Z] [debug] [vite] connecting...
+[2026-08-13T07:50:09.053Z] [debug] [vite] connected.
+[2026-08-13T07:50:09.077Z] [info] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[2026-08-13T07:50:47.667Z] [log] [vite] server connection lost. Polling for restart...
+[2026-08-13T07:50:48.729Z] [debug] [vite] connecting...
+[2026-08-13T07:50:48.790Z] [debug] [vite] connected.
+[2026-08-13T07:50:48.854Z] [info] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[2026-08-13T07:50:57.704Z] [debug] [vite] connecting...
+[2026-08-13T07:50:57.729Z] [debug] [vite] connected.
+[2026-08-13T07:50:57.731Z] [info] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[2026-08-13T07:54:25.564Z] [debug] [vite] hot updated: /src/index.css
+[2026-08-13T07:54:25.564Z] [debug] [vite] invalidate /src/store.tsx: Could not Fast Refresh ("PHRASES" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+[2026-08-13T07:54:25.564Z] [debug] [vite] hot updated: /src/store.tsx
+[2026-08-13T07:54:25.634Z] [debug] [vite] hot updated: /src/App.tsx
+[2026-08-13T07:54:25.634Z] [debug] [vite] hot updated: /src/screens/Review.tsx
+[2026-08-13T07:54:25.634Z] [debug] [vite] hot updated: /src/screens/Browse.tsx
+[2026-08-13T07:54:25.634Z] [debug] [vite] hot updated: /src/screens/Settings.tsx
+[2026-08-13T07:54:25.634Z] [debug] [vite] hot updated: /src/components/AudioButton.tsx
+[2026-08-13T07:54:25.634Z] [debug] [vite] hot updated: /src/components/CardFace.tsx
+[2026-08-13T07:54:34.838Z] [debug] [vite] hot updated: /src/index.css
+[2026-08-13T07:54:34.838Z] [debug] [vite] invalidate /src/store.tsx: Could not Fast Refresh ("PHRASES" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+[2026-08-13T07:54:34.838Z] [debug] [vite] hot updated: /src/store.tsx
+[2026-08-13T07:54:34.880Z] [debug] [vite] hot updated: /src/App.tsx
+[2026-08-13T07:54:34.880Z] [debug] [vite] hot updated: /src/screens/Review.tsx
+[2026-08-13T07:54:34.880Z] [debug] [vite] hot updated: /src/screens/Browse.tsx
+[2026-08-13T07:54:34.880Z] [debug] [vite] hot updated: /src/screens/Settings.tsx
+[2026-08-13T07:54:34.880Z] [debug] [vite] hot updated: /src/components/AudioButton.tsx
+[2026-08-13T07:54:34.880Z] [debug] [vite] hot updated: /src/components/CardFace.tsx
+[2026-08-13T07:54:45.225Z] [debug] [vite] hot updated: /src/index.css
+[2026-08-13T07:54:45.225Z] [debug] [vite] invalidate /src/store.tsx: Could not Fast Refresh ("PHRASES" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+[2026-08-13T07:54:45.225Z] [debug] [vite] hot updated: /src/store.tsx
+[2026-08-13T07:54:45.261Z] [debug] [vite] hot updated: /src/App.tsx
+[2026-08-13T07:54:45.261Z] [debug] [vite] hot updated: /src/screens/Review.tsx
+[2026-08-13T07:54:45.261Z] [debug] [vite] hot updated: /src/screens/Browse.tsx
+[2026-08-13T07:54:45.261Z] [debug] [vite] hot updated: /src/screens/Settings.tsx
+[2026-08-13T07:54:45.261Z] [debug] [vite] hot updated: /src/components/AudioButton.tsx
+[2026-08-13T07:54:45.261Z] [debug] [vite] hot updated: /src/components/CardFace.tsx
+[2026-08-13T07:54:50.070Z] [debug] [vite] hot updated: /src/index.css
+[2026-08-13T07:54:50.070Z] [debug] [vite] invalidate /src/store.tsx: Could not Fast Refresh ("PHRASES" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+[2026-08-13T07:54:50.070Z] [debug] [vite] hot updated: /src/store.tsx
+[2026-08-13T07:54:50.107Z] [debug] [vite] hot updated: /src/App.tsx
+[2026-08-13T07:54:50.107Z] [debug] [vite] hot updated: /src/screens/Review.tsx
+[2026-08-13T07:54:50.107Z] [debug] [vite] hot updated: /src/screens/Browse.tsx
+[2026-08-13T07:54:50.107Z] [debug] [vite] hot updated: /src/screens/Settings.tsx
+[2026-08-13T07:54:50.107Z] [debug] [vite] hot updated: /src/components/AudioButton.tsx
+[2026-08-13T07:54:50.107Z] [debug] [vite] hot updated: /src/components/CardFace.tsx
+[2026-08-13T07:54:57.529Z] [debug] [vite] hot updated: /src/index.css
+[2026-08-13T07:54:57.529Z] [debug] [vite] invalidate /src/store.tsx: Could not Fast Refresh ("PHRASES" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+[2026-08-13T07:54:57.529Z] [debug] [vite] hot updated: /src/store.tsx
+[2026-08-13T07:54:57.567Z] [debug] [vite] hot updated: /src/App.tsx
+[2026-08-13T07:54:57.567Z] [debug] [vite] hot updated: /src/screens/Review.tsx
+[2026-08-13T07:54:57.567Z] [debug] [vite] hot updated: /src/screens/Browse.tsx
+[2026-08-13T07:54:57.567Z] [debug] [vite] hot updated: /src/screens/Settings.tsx
+[2026-08-13T07:54:57.567Z] [debug] [vite] hot updated: /src/components/AudioButton.tsx
+[2026-08-13T07:54:57.567Z] [debug] [vite] hot updated: /src/components/CardFace.tsx
+[2026-08-13T07:55:06.005Z] [debug] [vite] hot updated: /src/index.css
+[2026-08-13T07:55:06.005Z] [debug] [vite] invalidate /src/store.tsx: Could not Fast Refresh ("PHRASES" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+[2026-08-13T07:55:06.005Z] [debug] [vite] hot updated: /src/store.tsx
+[2026-08-13T07:55:06.078Z] [debug] [vite] hot updated: /src/App.tsx
+[2026-08-13T07:55:06.078Z] [debug] [vite] hot updated: /src/screens/Review.tsx
+[2026-08-13T07:55:06.078Z] [debug] [vite] hot updated: /src/screens/Browse.tsx
+[2026-08-13T07:55:06.078Z] [debug] [vite] hot updated: /src/screens/Settings.tsx
+[2026-08-13T07:55:06.078Z] [debug] [vite] hot updated: /src/components/AudioButton.tsx
+[2026-08-13T07:55:06.078Z] [debug] [vite] hot updated: /src/components/CardFace.tsx
+[2026-08-13T07:55:12.071Z] [debug] [vite] connecting...
+[2026-08-13T07:55:12.097Z] [debug] [vite] connected.
+[2026-08-13T07:55:12.098Z] [info] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold

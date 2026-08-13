@@ -1,0 +1,129 @@
+@import 'tailwindcss';
+
+/* Tailwind v4: drive dark mode from a class, not the media query, so the
+   Settings theme toggle can override the OS. */
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-ink: #171613;
+  --color-paper: #faf7f0;
+  --color-amber: #e0a53b;
+
+  /* Tone colours as Tailwind utilities. Deliberately indirected through the
+     plain CSS vars below so `border-tone-high/45` flips with the theme instead
+     of freezing the light value. */
+  --color-tone-mid: var(--tone-mid);
+  --color-tone-low: var(--tone-low);
+  --color-tone-falling: var(--tone-falling);
+  --color-tone-high: var(--tone-high);
+  --color-tone-rising: var(--tone-rising);
+}
+
+:root {
+  --tone-mid: #d4537e;
+  --tone-low: #185fa5;
+  --tone-falling: #5f5e5a;
+  --tone-high: #d85a30;
+  --tone-rising: #639922;
+
+  /* Text variants. The five values above are the brief's, and as *strokes* they
+     clear the 3:1 bar for graphics on paper. As small text on paper, mid, high
+     and rising land at 3.2-3.7:1, under the 4.5:1 needed for body copy — so the
+     romanised syllables use these darkened siblings instead. Same hue, measured
+     rather than eyeballed. Dark mode needs no such split; see below. */
+  --tone-mid-text: #b6476c;
+  --tone-low-text: #185fa5;
+  --tone-falling-text: #5f5e5a;
+  --tone-high-text: #ba4d29;
+  --tone-rising-text: #4f7a1b;
+
+  /* Art panel palette. Mid-tone fills only — near-black and near-white each
+     vanish in one of the two themes. Line work uses currentColor, which flips
+     with the theme and therefore can never disappear. */
+  --art-fill: #b4b2a9;
+  --art-fill-deep: #888780;
+  --art-amber: #d99b2e;
+  --art-red: #cf5630;
+  --art-blue: #4a8fd4;
+  --art-green: #6d9f36;
+  --art-pink: #cf6b90;
+
+  color-scheme: light;
+}
+
+/* Measured, not assumed. The brief's five values against #0F0E0C come out at
+   low 2.96:1 and falling 2.97:1 — both below even the 3:1 graphics bar, so on a
+   dark surface those two contours genuinely disappear. Dark mode therefore
+   lifts all five, keeping the hue. All five then clear 7:1, which is why dark
+   mode needs no separate text variant. See README "Colour contrast". */
+.dark {
+  --tone-mid: #f07ba1;
+  --tone-low: #67aef0;
+  --tone-falling: #b4b2a9;
+  --tone-high: #f5834f;
+  --tone-rising: #8fce4b;
+
+  --tone-mid-text: #f07ba1;
+  --tone-low-text: #67aef0;
+  --tone-falling-text: #b4b2a9;
+  --tone-high-text: #f5834f;
+  --tone-rising-text: #8fce4b;
+
+  --art-fill: #6f6e69;
+  --art-fill-deep: #918f88;
+  --art-amber: #e8b455;
+  --art-red: #ee7a52;
+  --art-blue: #6fb0ee;
+  --art-green: #92c455;
+  --art-pink: #e58cae;
+
+  color-scheme: dark;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family:
+    ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial,
+    'Noto Sans Thai', 'Leelawadee UI', 'Thonburi', sans-serif;
+  -webkit-tap-highlight-color: transparent;
+  overscroll-behavior-y: none;
+}
+
+.dark body {
+  background: #0f0e0c;
+  color: #f3efe6;
+}
+
+/* Thai script needs a taller line box than Latin or the tone marks clip. */
+.thai {
+  font-family: 'Noto Sans Thai', 'Leelawadee UI', 'Thonburi', 'Sarabun', system-ui, sans-serif;
+  line-height: 1.7;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-amber);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
