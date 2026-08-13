@@ -7,7 +7,7 @@ spaced repetition. Static site, no backend, no accounts, works offline.
 ```bash
 npm install
 npm run dev            # http://localhost:5173/thai-flashcards/
-npm test               # 55 unit tests
+npm test               # 58 unit tests
 npm run build          # → dist/
 ```
 
@@ -32,8 +32,8 @@ measured, it says so.
 ### Scheduler
 
 SM-2 with Anki's defaults, in `src/srs/scheduler.ts` — pure functions, no IO, `now` always passed
-in. 23 tests in `scheduler.test.ts`, 15 more for queue building in `queue.test.ts`, 17 for data
-integrity. All 55 pass.
+in. 23 tests in `scheduler.test.ts`, 15 more for queue building in `queue.test.ts`, 20 for data
+integrity. All 58 pass.
 
 One acceptance criterion could not be met as literally written:
 
@@ -165,6 +165,36 @@ not be pinned down it was dropped and replaced.
 
 Tone-pair warnings are on the cards the brief named — สวย/ซวย, ใกล้/ไกล, ขาว/ข้าว — plus ถูก
 (cheap **and** correct) and ไหม้/ไม่.
+
+### The meaning link
+
+A keyword mnemonic has two halves:
+
+1. Thai sound → English keyword
+2. **Keyword → the meaning**, in one connected image
+
+The first build shipped only half one, because the brief's rule 4 says "the sound-alike takes
+priority over meaning fidelity; the meaning is carried by the English text". Followed literally,
+that produces a card showing a running pie for "go", a boombox for "reduce a little", and a hen
+laying an egg for "then" — sounds with no route back. The learner recalls a pie and is stuck.
+
+Every phrase now carries a `link`: one sentence that puts the keywords into a scene that *is* the
+meaning.
+
+> **ลดหน่อยได้ไหม** — You make a **LOT** of **NOISE** at the stall — "**DYE MY** hair pink if you
+> like, just drop the price" — until you get a discount.
+
+> **ไป** — The **PIE** sprouts legs and **goes** sprinting off down the road.
+
+It renders directly under the panels, as the loudest thing on the lower half of the card. Three
+tests hold it up, and they caught twelve links on the first run:
+
+- every phrase has one
+- it names **every** mnemonic keyword (prefix match, so "the crow CAWs" counts for "caw")
+- it reaches the **meaning** — it must share a word with the meaning, the literal, or a part gloss
+
+That last test is the one that matters. It is mechanically checkable proof that no card stops at
+the sound.
 
 ### Word-by-word breakdown
 

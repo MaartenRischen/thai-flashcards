@@ -6,7 +6,7 @@ import { enabledDirections } from '../srs/queue';
 import { SyllableRow } from '../components/ToneContour';
 import { AudioButton } from '../components/AudioButton';
 import { PanelStrip } from '../components/Panel';
-import { WeakBadge, WordBreakdown } from '../components/CardFace';
+import { MeaningLink, WeakBadge, WordBreakdown } from '../components/CardFace';
 
 /**
  * Doubles as a phrasebook you scroll while queuing for food, so nothing here
@@ -125,6 +125,7 @@ export function Browse() {
                   <div className="mt-3 flex flex-col gap-3 border-t border-ink/10 pt-3 dark:border-paper/10">
                     <WordBreakdown phrase={p} compact />
                     <PanelStrip art={p.art} mnemonic={p.mnemonic} scene={p.scene} compact />
+                    <MeaningLink phrase={p} compact />
                     {p.notes && <p className="text-xs leading-relaxed opacity-75">{p.notes}</p>}
                     <div className="flex flex-wrap gap-2">
                       <RowAction

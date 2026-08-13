@@ -77,6 +77,26 @@ export function WordBreakdown({ phrase, compact = false }: { phrase: Phrase; com
   );
 }
 
+/**
+ * The sentence that ties the keywords back to the meaning.
+ *
+ * Sits directly under the panels and is styled as the loudest thing on the
+ * lower half of the card, because it is the half of a keyword mnemonic that
+ * actually does the recall work. Panels alone teach "pai sounds like pie" and
+ * leave you holding a pie.
+ */
+export function MeaningLink({ phrase, compact = false }: { phrase: Phrase; compact?: boolean }) {
+  return (
+    <p
+      className={`w-full max-w-prose rounded-2xl border border-amber/45 bg-amber/[0.12] px-4 py-3 text-center font-medium leading-relaxed ${
+        compact ? 'text-xs' : 'text-[15px]'
+      }`}
+    >
+      {phrase.link}
+    </p>
+  );
+}
+
 export function WeakBadge({ className = '' }: { className?: string }) {
   return (
     <span
@@ -139,6 +159,8 @@ export function CardBack({ phrase }: { phrase: Phrase }) {
       <WordBreakdown phrase={phrase} />
 
       <PanelStrip art={phrase.art} mnemonic={phrase.mnemonic} scene={phrase.scene} />
+
+      <MeaningLink phrase={phrase} />
 
       {(phrase.notes || phrase.gendered || phrase.weak) && (
         <div className="flex w-full max-w-prose flex-col items-center gap-2">

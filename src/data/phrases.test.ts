@@ -64,6 +64,68 @@ describe('phrase data integrity', () => {
     }
   });
 
+  /**
+   * A keyword mnemonic has two halves: Thai sound → English keyword, then
+   * keyword → meaning. The second half is the one that is easy to skip and
+   * fatal to skip, because without it the card teaches "pai sounds like pie"
+   * and leaves the learner holding a pie with no route back to "go".
+   *
+   * These tests exist because that is exactly what shipped the first time.
+   */
+  describe('meaning links', () => {
+    const words = (s: string) =>
+      s
+        .toLowerCase()
+        .split(/[^a-z]+/)
+        .filter(Boolean);
+
+    it('gives every phrase a link', () => {
+      for (const p of PHRASES) {
+        expect(p.link.trim().length, `${p.id} has no link`).toBeGreaterThan(20);
+      }
+    });
+
+    it('names every mnemonic keyword in the link', () => {
+      const bad: string[] = [];
+      for (const p of PHRASES) {
+        const hay = words(p.link);
+        for (const m of p.mnemonic) {
+          const head = words(m)[0];
+          if (!head || head.length < 2) continue; // 'y-eye', 't-hong'
+          // Prefix match, so "the crow CAWs" counts for "caw" and "VietNAM"
+          // counts for "Viet-NAM".
+          if (!hay.some((w) => w.startsWith(head))) bad.push(`${p.id} → "${m}"`);
+        }
+      }
+      expect(bad, `links that never mention their keyword:\n${bad.join('\n')}`).toEqual([]);
+    });
+
+    it('carries the meaning through to the link', () => {
+      // The link has to land on what the phrase means, so it must share a real
+      // word with the meaning, the literal, or the gloss of one of its parts.
+      // 'not' and 'no' are deliberately NOT stopwords: for a deck this size
+      // they are half the meanings.
+      const STOP = new Set([
+        'a', 'an', 'the', 'to', 'of', 'in', 'on', 'at', 'is', 'it', 'and', 'or', 'you', 'your',
+        'i', 'me', 'my', 'that', 'this', 'for', 'with', 'do', 'be', 'as', 'also',
+        'here', 'up', 'out', 'off', 'its', 'any', 'so',
+      ]);
+      const bad: string[] = [];
+      for (const p of PHRASES) {
+        const target = new Set(
+          [p.meaning, p.literal ?? '', ...p.words.map((w) => w.gloss)]
+            .flatMap(words)
+            .filter((w) => w.length >= 2 && !STOP.has(w)),
+        );
+        // Prefix match, so a meaning of "go" is reached by a link saying "goes".
+        const hay = words(p.link);
+        const shared = [...target].some((w) => hay.some((h) => h.startsWith(w)));
+        if (!shared) bad.push(`${p.id} → "${p.meaning}"`);
+      }
+      expect(bad, `links that never reach their meaning:\n${bad.join('\n')}`).toEqual([]);
+    });
+  });
+
   it('uses only declared categories', () => {
     for (const p of PHRASES) {
       expect(CATEGORIES, `${p.id}`).toContain(p.category);

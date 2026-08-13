@@ -42,6 +42,8 @@ export const PHRASES: Phrase[] = [
     ],
     meaning: 'hello / goodbye',
     mnemonic: ['so what', 'Dee'],
+    link:
+      'Dee waves and you shrug back — “SO WHAT, DEE!” — the same easy shrug does for hello and for goodbye.',
     scene: [
       'A figure caught mid-shrug, both palms turned up.',
       'Dee waving hello with one hand raised high.',
@@ -67,6 +69,8 @@ export const PHRASES: Phrase[] = [
     ],
     meaning: 'thank you',
     mnemonic: ['cop coon'],
+    link:
+      'The raccoon COP hands your COON-skin wallet back, and you thank him for it.',
     scene: ['A raccoon dressed as a police officer hands back a wallet.'],
     art: [{ component: 'Raccoon', props: { holding: 'wallet', hat: 'police' } }],
     category: 'politeness',
@@ -83,6 +87,8 @@ export const PHRASES: Phrase[] = [
     ],
     meaning: 'polite particle (men)',
     mnemonic: ['crab'],
+    link:
+      'The CRAB snaps one claw up in salute after every single thing it says — that is what men do with ครับ.',
     scene: ['A crab holding one claw up in a stiff, polite salute.'],
     art: [{ component: 'Crab' }],
     category: 'modules',
@@ -101,6 +107,8 @@ export const PHRASES: Phrase[] = [
     ],
     meaning: 'polite particle (women)',
     mnemonic: ['car'],
+    link:
+      'Someone holds the CAR door for you; a woman ends every sentence with that same small polite gesture.',
     scene: ['A small car with its passenger door held politely open.'],
     art: [{ component: 'Car' }],
     category: 'modules',
@@ -123,6 +131,8 @@ export const PHRASES: Phrase[] = [
     ],
     meaning: 'sorry / excuse me',
     mnemonic: ['caw', 'toast'],
+    link:
+      'The crow CAWs because you burnt its TOAST, and you say sorry.',
     scene: [
       'The Crow letting out a loud CAW, one wing raised.',
       'A slice of toast burnt black at one corner.',
@@ -149,6 +159,8 @@ export const PHRASES: Phrase[] = [
     ],
     meaning: 'no worries / never mind',
     mnemonic: ['my pen', 'rye'],
+    link:
+      'Somebody snaps MY PEN and drops the bits in the RYE — and you wave it off, no worries.',
     scene: [
       'A single fountain pen held up between two fingers.',
       'A sheaf of rye stalks tied with string.',
@@ -173,6 +185,8 @@ export const PHRASES: Phrase[] = [
     ],
     meaning: "you're welcome / glad to",
     mnemonic: ['yin, Dee'],
+    link:
+      'Dee holds up the YIN-yang: everything balances, nothing is owed — you are welcome.',
     scene: ['Dee holding up a big black-and-white yin-yang disc.'],
     art: [{ component: 'Dee', props: { holding: 'yinyang' } }],
     category: 'politeness',
@@ -198,6 +212,8 @@ export const PHRASES: Phrase[] = [
     ],
     meaning: 'how are you?',
     mnemonic: ['subway', 'Dee, my?'],
+    link:
+      'You spot Dee on the SUBWAY: “DEE, MY friend — how are you keeping?”',
     scene: [
       'A subway train pulling into a tiled platform.',
       'Dee with both eyebrows up and a big question mark overhead.',
@@ -224,6 +240,8 @@ export const PHRASES: Phrase[] = [
     ],
     meaning: "I'm fine",
     mnemonic: ['subway', 'Dee'],
+    link:
+      'Dee steps off the SUBWAY, thumbs up, nothing wrong: I am fine.',
     scene: [
       'A subway train pulling into a tiled platform.',
       'Dee giving a relaxed thumbs up, eyes shut.',
@@ -247,6 +265,8 @@ export const PHRASES: Phrase[] = [
     ],
     meaning: 'good luck',
     mnemonic: ['choke, Dee'],
+    link:
+      'You watch Dee CHOKE on a four-leaf clover — good luck, Dee, you are going to need it.',
     scene: ['Dee choking on a four-leaf clover, eyes wide, one hand at the throat.'],
     art: [{ component: 'Dee', props: { action: 'choke' } }],
     category: 'smalltalk',
@@ -267,6 +287,8 @@ export const PHRASES: Phrase[] = [
     ],
     meaning: 'goodbye (final)',
     mnemonic: ['la! corn'],
+    link:
+      'The CORN sings one long LA as you walk away for the last time: the final goodbye.',
     scene: ['A cob of corn singing a long LAAA, music notes rising off it.'],
     art: [{ component: 'Corn' }],
     category: 'smalltalk',
@@ -290,6 +312,8 @@ export const PHRASES: Phrase[] = [
     ],
     meaning: 'see you later',
     mnemonic: ['lay-oh', 'jerkin'],
+    link:
+      'The hen LAYs her last O as you pull your JERKIN off the peg to leave — see you later.',
     scene: [
       'A hen laying a single egg with a big letter O painted on it.',
       'A brown leather jerkin hanging on a peg.',
@@ -312,6 +336,8 @@ export const PHRASES: Phrase[] = [
     ],
     meaning: 'yes / that’s right',
     mnemonic: ['chai'],
+    link:
+      '“CHAI?” — “Yes, that is exactly it.” The one-word confirmation at every stall.',
     scene: ['A steaming glass of chai tea on a saucer.'],
     art: [{ component: 'ChaiGlass' }],
     category: 'yesno',
@@ -333,6 +359,8 @@ export const PHRASES: Phrase[] = [
     ],
     meaning: "no / that's not it",
     mnemonic: ['my', 'chai'],
+    link:
+      'A palm shoves MY CHAI back across the counter: no, that is not correct.',
     scene: [
       'A flat palm held out, pushing something away.',
       'A steaming glass of chai tea on a saucer.',
@@ -351,6 +379,8 @@ export const PHRASES: Phrase[] = [
     ],
     meaning: 'not / no',
     mnemonic: ['my'],
+    link:
+      'A flat palm pinning MY bag down: not that, not yours, not happening.',
     scene: ['A flat palm pressed down on a suitcase, claiming it — MY bag.'],
     art: [{ component: 'PalmNo' }],
     category: 'modules',
@@ -372,6 +402,8 @@ export const PHRASES: Phrase[] = [
     ],
     meaning: 'I understand',
     mnemonic: ['cow jive'],
+    link:
+      'The COW starts to JIVE the second the beat drops — it got it, it understands.',
     scene: ['The Cow doing a jive step, one hoof kicked out to the side.'],
     art: [{ component: 'Cow', props: { action: 'jive' } }],
     category: 'yesno',
@@ -393,6 +425,8 @@ export const PHRASES: Phrase[] = [
     ],
     meaning: "I don't understand",
     mnemonic: ['my', 'cow jive'],
+    link:
+      'Palm up: MY COW cannot JIVE to this at all — I do not understand.',
     scene: [
       'A flat palm held out, pushing something away.',
       'The Cow doing a jive step, one hoof kicked out to the side.',
@@ -416,6 +450,8 @@ export const PHRASES: Phrase[] = [
     ],
     meaning: "I don't know",
     mnemonic: ['my', 'roo'],
+    link:
+      'MY ROO shrugs out of the pouch with no idea at all — I do not know.',
     scene: [
       'A flat palm held out, pushing something away.',
       'A kangaroo joey peering out of the pouch with a shrug.',
@@ -439,6 +475,8 @@ export const PHRASES: Phrase[] = [
     ],
     meaning: 'please speak slowly',
     mnemonic: ['poot', 'cha-cha'],
+    link:
+      'You POOT out one word per slow CHA-CHA step, so they speak slowly back.',
     scene: [
       'A mouth blowing out one round puff of air.',
       'Two feet on numbered footprints doing a slow cha-cha.',
@@ -463,6 +501,8 @@ export const PHRASES: Phrase[] = [
     ],
     meaning: 'delicious',
     mnemonic: ['a royal'],
+    link:
+      'A ROYAL kisses his fingertips over the noodles: delicious.',
     scene: ['A crowned king kissing his fingertips over a steaming bowl of noodles.'],
     art: [{ component: 'Royal' }],
     category: 'food',
@@ -480,6 +520,8 @@ export const PHRASES: Phrase[] = [
     ],
     meaning: 'spicy',
     mnemonic: ['pet'],
+    link:
+      'Your PET pants with a flame over its head — far too spicy.',
     scene: ['Pet panting hard with a bright red tongue and a flame over its head.'],
     art: [{ component: 'Pet', props: { action: 'burn' } }],
     category: 'food',
@@ -499,6 +541,8 @@ export const PHRASES: Phrase[] = [
     ],
     meaning: 'not spicy',
     mnemonic: ['my', 'pet'],
+    link:
+      'Palm up, because MY PET cannot take the flame: not spicy, please.',
     scene: [
       'A flat palm held out, pushing something away.',
       'Pet panting hard with a bright red tongue and a flame over its head.',
@@ -519,6 +563,8 @@ export const PHRASES: Phrase[] = [
     ],
     meaning: 'water',
     mnemonic: ['Viet-NAM'],
+    link:
+      'A conical VietNAM hat drifts away down the river — that river is water.',
     scene: ['A conical Vietnamese hat floating on the surface of a lake.'],
     art: [{ component: 'VietHat' }],
     category: 'food',
@@ -540,6 +586,8 @@ export const PHRASES: Phrase[] = [
     ],
     meaning: 'to eat (a meal)',
     mnemonic: ['gin, cow'],
+    link:
+      'The COW tips GIN over its bowl of rice and tucks in: that is eating.',
     scene: ['The Cow tipping a glass of gin over a bowl of rice.'],
     art: [{ component: 'Cow', props: { action: 'gin' } }],
     category: 'food',
@@ -557,6 +605,8 @@ export const PHRASES: Phrase[] = [
     ],
     meaning: 'hungry',
     mnemonic: ['hew'],
+    link:
+      'You HEW into a sandwich with an axe, because you are that hungry.',
     scene: ['An axe hewing straight down into a giant sandwich.'],
     art: [{ component: 'HewSandwich' }],
     category: 'food',
@@ -577,6 +627,8 @@ export const PHRASES: Phrase[] = [
     ],
     meaning: 'the bill, please',
     mnemonic: ['check bill'],
+    link:
+      'You put a thick red CHECK across the BILL: the bill, please.',
     scene: ['A restaurant bill on a saucer with a thick red tick across it.'],
     art: [{ component: 'CheckBill' }],
     category: 'food',
@@ -594,6 +646,8 @@ export const PHRASES: Phrase[] = [
     ],
     meaning: 'may I have',
     mnemonic: ['caw'],
+    link:
+      'The crow CAWs with one wing held out, asking: may I have?',
     scene: ['The Crow letting out a loud CAW with one wing held out, asking.'],
     art: [{ component: 'Crow', props: { action: 'caw' } }],
     category: 'modules',
@@ -617,6 +671,8 @@ export const PHRASES: Phrase[] = [
     ],
     meaning: 'how much?',
     mnemonic: ['tow rye'],
+    link:
+      'They TOW away a whole sheaf of RYE and you shout after it: how much?',
     scene: ['A tow truck dragging away a giant sheaf of rye.'],
     art: [{ component: 'TowRye' }],
     category: 'money',
@@ -636,6 +692,8 @@ export const PHRASES: Phrase[] = [
     ],
     meaning: 'too expensive',
     mnemonic: ['pang! pie'],
+    link:
+      'A PIE hits your open wallet with a PANG — that is too expensive.',
     scene: ['A Pie flying through the air and hitting an open wallet with a PANG.'],
     art: [{ component: 'PiePang' }],
     category: 'money',
@@ -661,6 +719,8 @@ export const PHRASES: Phrase[] = [
     meaning: 'any discount?',
     literal: 'lower it a little, can you?',
     mnemonic: ['lot noise', 'dye my'],
+    link:
+      'You make a LOT of NOISE at the stall — “DYE MY hair pink if you like, just drop the price” — until you get a discount.',
     scene: [
       'A boombox blaring in a parking lot, sound waves radiating.',
       'A head having its hair dyed bright pink with a brush.',
@@ -685,6 +745,8 @@ export const PHRASES: Phrase[] = [
     ],
     meaning: "I'll take this one",
     mnemonic: ['ow!', 'on knee'],
+    link:
+      'You grab it off the stall — OW! — and balance it ON your KNEE: I will take this one.',
     scene: [
       'A hand snatching an item off a stall, thumb stubbed — OW!',
       'A market trinket balanced ON a bare KNEE with a plaster.',
@@ -709,6 +771,8 @@ export const PHRASES: Phrase[] = [
     ],
     meaning: "I don't want it",
     mnemonic: ['my', 'ow!'],
+    link:
+      'MY hand snaps back — OW! — I do not want it.',
     scene: [
       'A flat palm held out, pushing something away.',
       'A hand snatching back from a stall, thumb stubbed — OW!',
@@ -730,6 +794,8 @@ export const PHRASES: Phrase[] = [
     ],
     meaning: 'go',
     mnemonic: ['pie'],
+    link:
+      'The PIE sprouts legs and goes sprinting off down the road.',
     scene: ['A Pie sprouting two legs and running.'],
     art: [{ component: 'Pie', props: { action: 'run' } }],
     category: 'directions',
@@ -749,6 +815,8 @@ export const PHRASES: Phrase[] = [
     ],
     meaning: 'where are you going?',
     mnemonic: ['pie', 'nigh?'],
+    link:
+      'The PIE tears past and the knight shouts after it, “NIGH? Where are you going?”',
     scene: [
       'A Pie sprouting two legs and running.',
       'A knight in armour pointing down a forked road, question mark overhead.',
@@ -773,6 +841,8 @@ export const PHRASES: Phrase[] = [
     ],
     meaning: 'straight on',
     mnemonic: ['throng of', 'pie'],
+    link:
+      'A whole THRONG of PIEs marches dead straight down the road: straight on.',
     scene: [
       'A throng of people packed shoulder to shoulder, marching in one straight line.',
       'A Pie sprouting two legs and running.',
@@ -795,6 +865,8 @@ export const PHRASES: Phrase[] = [
     ],
     meaning: 'turn left',
     mnemonic: ['Leo', 'sighs'],
+    link:
+      'LEO leans into the bend and SIGHs as he goes: turn left.',
     scene: [
       'Leo the lion leaning hard into a left-hand turn.',
       'A long puff of breath escaping, shoulders slumped to the left.',
@@ -817,6 +889,8 @@ export const PHRASES: Phrase[] = [
     ],
     meaning: 'turn right',
     mnemonic: ['Leo', 'kwaaa!'],
+    link:
+      'LEO leans the other way and the duck goes KWAAA as it climbs: turn right.',
     scene: [
       'Leo the lion leaning hard into a right-hand turn.',
       'A duck facing right, beak wide open, letting out one long climbing KWAAA.',
@@ -837,6 +911,8 @@ export const PHRASES: Phrase[] = [
     ],
     meaning: 'stop',
     mnemonic: ["you'd"],
+    link:
+      'The flat palm painted on the sign says YOU\'D better stop right there.',
     scene: ['A flat palm painted across a red octagonal stop sign.'],
     art: [{ component: 'StopSign' }],
     category: 'directions',
@@ -862,6 +938,8 @@ export const PHRASES: Phrase[] = [
     meaning: "where's the toilet?",
     literal: 'water room is where?',
     mnemonic: ['Hong', 'Viet-NAM', 'you, nigh?'],
+    link:
+      'A HONG Kong street is flooded, a VietNAM hat floats past, and the knight points at YOU — “NIGH? Where is the water room?”',
     scene: [
       'The Hong Kong skyline at dusk.',
       'A conical Vietnamese hat floating on the water below it.',
@@ -889,6 +967,8 @@ export const PHRASES: Phrase[] = [
     ],
     meaning: 'help!',
     mnemonic: ['chewy', 'doughy'],
+    link:
+      'One hand welded into CHEWY toffee, the other sinking in DOUGHy bread — help!',
     scene: [
       'A hand stuck fast in a stretching chewy toffee, straining to pull free.',
       'A hand sinking into a mound of doughy bread, only the fingertips showing.',
@@ -914,6 +994,8 @@ export const PHRASES: Phrase[] = [
     ],
     meaning: 'can you? / is that possible?',
     mnemonic: ['dye my'],
+    link:
+      '“Can you DYE MY hair?” — the request you tack onto the end of anything.',
     scene: ['A head having its hair dyed bright pink with a brush.'],
     art: [{ component: 'HairDye' }],
     category: 'modules',
@@ -933,6 +1015,8 @@ export const PHRASES: Phrase[] = [
     ],
     meaning: 'can / OK / sure',
     mnemonic: ['dye'],
+    link:
+      'The DYE brush is loaded and dripping, ready to go: yes, can do.',
     scene: ['A brush loaded with bright pink hair dye, dripping.'],
     art: [{ component: 'DyeBrush' }],
     category: 'yesno',
@@ -953,6 +1037,8 @@ export const PHRASES: Phrase[] = [
     ],
     meaning: "can't / not allowed",
     mnemonic: ['my', 'dye'],
+    link:
+      'MY palm up and MY DYE brush bone dry: cannot be done, not allowed.',
     scene: [
       'A flat palm held out, pushing something away.',
       'A brush loaded with bright pink hair dye, dripping.',
@@ -975,6 +1061,8 @@ export const PHRASES: Phrase[] = [
     ],
     meaning: "there isn't any / I don't have",
     mnemonic: ['my', 'me'],
+    link:
+      'MY palm goes up and ME stands there empty-handed: there is not any.',
     scene: [
       'A flat palm held out, pushing something away.',
       'Dee jabbing a thumb at their own chest — me.',
@@ -998,6 +1086,8 @@ export const PHRASES: Phrase[] = [
     ],
     meaning: "no need / don't bother",
     mnemonic: ['my', 'tong'],
+    link:
+      'Palm up, MY TONGs snapping shut on thin air: no need, do not bother.',
     scene: [
       'A flat palm held out, pushing something away.',
       'A pair of kitchen tongs snapping shut on nothing.',
@@ -1024,6 +1114,8 @@ export const PHRASES: Phrase[] = [
     ],
     meaning: "what's your name?",
     mnemonic: ['chew', 'a rye'],
+    link:
+      'You CHEW A stalk of RYE while you ask it: so what is your name?',
     scene: [
       'A mouth chewing hard, jaw working.',
       'A single stalk of rye held up with a question mark beside it.',
@@ -1049,6 +1141,8 @@ export const PHRASES: Phrase[] = [
     ],
     meaning: 'where are you from?',
     mnemonic: ['ma jack', 'nigh?'],
+    link:
+      'MA cranks the JACK under a heavy suitcase and the knight asks NIGH — where have you come from?',
     scene: [
       'A mother cranking a car jack under a heavy suitcase.',
       'A knight in armour pointing down a forked road, question mark overhead.',
@@ -1067,6 +1161,8 @@ export const PHRASES: Phrase[] = [
     ],
     meaning: 'beautiful',
     mnemonic: ['sway'],
+    link:
+      'The palm tree SWAYs against a low sun: beautiful.',
     scene: ['A palm tree swaying in the breeze against a low sun.'],
     art: [{ component: 'PalmTree' }],
     category: 'smalltalk',
@@ -1092,6 +1188,8 @@ export const PHRASES: Phrase[] = [
     ],
     meaning: "I can't speak Thai",
     mnemonic: ['poot Thai', 'my', 'dye'],
+    link:
+      'You POOT one puff at the THAI flag, palm up, MY DYE brush dry — I cannot speak Thai.',
     scene: [
       'A mouth blowing one round puff of air across a Thai flag.',
       'A flat palm held out, pushing something away.',
@@ -1116,6 +1214,8 @@ export const PHRASES: Phrase[] = [
     ],
     meaning: 'very / a lot',
     mnemonic: ['mark'],
+    link:
+      'One thick MARK slashed edge to edge across the page: very, a lot, loads.',
     scene: ['A thick felt-tip mark scrawled edge to edge across a page.'],
     art: [{ component: 'FeltMark' }],
     category: 'smalltalk',
@@ -1139,6 +1239,8 @@ export const PHRASES: Phrase[] = [
     ],
     meaning: "I'm full",
     mnemonic: ['imp', 'lay-oh'],
+    link:
+      'The IMP pats its bulging belly as the hen LAYs one last O — I am full already.',
     scene: [
       'A little imp with a bulging round belly, patting it with both hands.',
       'A hen laying a single egg with a big letter O painted on it.',
@@ -1163,6 +1265,8 @@ export const PHRASES: Phrase[] = [
     ],
     meaning: 'plain water',
     mnemonic: ['Viet-NAM', 'plough'],
+    link:
+      'A VietNAM hat floats over one bare PLOUGHed furrow: plain water, nothing added.',
     scene: [
       'A conical Vietnamese hat floating on the surface of a lake.',
       'A plough turning one straight furrow through bare earth.',
@@ -1187,6 +1291,8 @@ export const PHRASES: Phrase[] = [
     ],
     meaning: 'I eat vegetarian',
     mnemonic: ['gin', 'jay'],
+    link:
+      'The JAY sips GIN on a cabbage, because the JAY only ever eats vegetarian.',
     scene: ['A glass of gin.', 'A blue jay perched on a cabbage.'],
     art: [{ component: 'GinGlass' }, { component: 'Jay' }],
     category: 'food',
@@ -1211,6 +1317,8 @@ export const PHRASES: Phrase[] = [
     meaning: 'takeaway, please',
     literal: 'take it back home',
     mnemonic: ['ow!', 'glub', 'barn'],
+    link:
+      'You grab the hot box — OW! — it GLUBs as you run it home to the BARN: takeaway.',
     scene: [
       'A hand grabbing a hot food box, thumb stubbed — OW!',
       'One fat bubble going GLUB up through water.',
@@ -1231,6 +1339,8 @@ export const PHRASES: Phrase[] = [
     ],
     meaning: 'chicken',
     mnemonic: ['guy'],
+    link:
+      'A GUY stands there with a hen roosting on his shoulder: chicken.',
     scene: ['A guy in a flat cap, arms folded, a hen roosting on his shoulder.'],
     art: [{ component: 'GuyHen' }],
     category: 'food',
@@ -1247,6 +1357,8 @@ export const PHRASES: Phrase[] = [
     ],
     meaning: 'pork',
     mnemonic: ['moo'],
+    link:
+      'A pig steps up to the mic and lets out a long MOO — it is pork, not beef.',
     scene: ['A pig at a microphone letting out a long MOO, looking confused.'],
     art: [{ component: 'PigMoo' }],
     category: 'food',
@@ -1267,6 +1379,8 @@ export const PHRASES: Phrase[] = [
     ],
     meaning: 'just a little',
     mnemonic: ['knit', 'noise'],
+    link:
+      'One thumbnail of KNITting and one squeak of NOISE: just a little, that is all.',
     scene: [
       'A knitted square no bigger than a thumbnail, needles still in it.',
       'A boombox blaring, sound waves radiating.',
@@ -1294,6 +1408,8 @@ export const PHRASES: Phrase[] = [
     ],
     meaning: 'no ice, please',
     mnemonic: ['my', 'sigh', 'NAM-kang'],
+    link:
+      'MY palm up and a long SIGH as the NAM-kang kangaroo keeps its ice cube to itself: no ice, please.',
     scene: [
       'A flat palm held out, pushing something away.',
       'Dee letting out a long sigh, shoulders dropping.',
@@ -1325,6 +1441,8 @@ export const PHRASES: Phrase[] = [
     ],
     meaning: 'how many baht?',
     mnemonic: ['key', 'baht'],
+    link:
+      'You hold up a KEY in one hand and a fan of BAHT in the other: how many?',
     scene: [
       'A heavy brass key lying flat.',
       'A fan of purple banknotes spread like a hand of cards.',
@@ -1349,6 +1467,8 @@ export const PHRASES: Phrase[] = [
     ],
     meaning: 'change (money back)',
     mnemonic: ['ng-earn', 'torn'],
+    link:
+      'What you NG-EARN comes back to you TORN in half, and that half is your change.',
     scene: [
       'A wage packet split open with coins spilling out — what you EARN.',
       'A banknote torn clean in half.',
@@ -1369,6 +1489,8 @@ export const PHRASES: Phrase[] = [
     ],
     meaning: 'cheap',
     mnemonic: ['took'],
+    link:
+      'You TOOK it off the shelf without even thinking, because it was that cheap.',
     scene: ['A hand that has just took a bargain off a shelf, price tag flapping.'],
     art: [{ component: 'TookBargain' }],
     category: 'money',
@@ -1392,6 +1514,8 @@ export const PHRASES: Phrase[] = [
     ],
     meaning: 'do you take cards?',
     mnemonic: ['rap bat', 'my?'],
+    link:
+      'A rapper RAPs on the counter with a BAT — “MY card, do you take it?”',
     scene: [
       'A rapper holding a cricket bat up like a microphone.',
       'A knight in armour pointing down a forked road, question mark overhead.',
@@ -1417,6 +1541,8 @@ export const PHRASES: Phrase[] = [
     ],
     meaning: 'do you have any?',
     mnemonic: ['me', 'my?'],
+    link:
+      'ME pointing at the empty shelf while the knight asks MY? — do you have any?',
     scene: [
       'Dee jabbing a thumb at their own chest — me.',
       'A knight in armour pointing down a forked road, question mark overhead.',
@@ -1441,6 +1567,8 @@ export const PHRASES: Phrase[] = [
     ],
     meaning: 'can I try it?',
     mnemonic: ['long', 'dye my'],
+    link:
+      'You pull the tape measure LONG and ask to DYE MY hair first — can I try it?',
     scene: [
       'A tape measure pulled out long and straight.',
       'A head having its hair dyed bright pink with a brush.',
@@ -1464,6 +1592,8 @@ export const PHRASES: Phrase[] = [
     ],
     meaning: 'which one?',
     mnemonic: ['on nigh?'],
+    link:
+      'The knight is sat ON the signpost calling NIGH — which one do you mean?',
     scene: ['A knight in armour perched ON a signpost at a fork, pointing down one road.'],
     art: [{ component: 'KnightOn' }],
     category: 'shopping',
@@ -1481,6 +1611,8 @@ export const PHRASES: Phrase[] = [
     ],
     meaning: 'big',
     mnemonic: ['y-eye'],
+    link:
+      'One huge EYE filling the whole frame — that is big.',
     scene: ['One huge eye, wide open, filling the whole panel.'],
     art: [{ component: 'BigEye' }],
     category: 'shopping',
@@ -1496,6 +1628,8 @@ export const PHRASES: Phrase[] = [
     ],
     meaning: 'small',
     mnemonic: ['leg'],
+    link:
+      'One doll\'s LEG lying in a giant open palm — that is small.',
     scene: ["One tiny doll's leg lying on a giant open palm."],
     art: [{ component: 'TinyLeg' }],
     category: 'shopping',
@@ -1519,6 +1653,8 @@ export const PHRASES: Phrase[] = [
     ],
     meaning: 'no bag, thanks',
     mnemonic: ['my', 'ow!', 'tongue'],
+    link:
+      'MY palm goes up — OW! — and the bag stays hanging off a TONGUE: no bag, thanks.',
     scene: [
       'A flat palm held out, pushing something away.',
       'A hand snatching back from a counter, thumb stubbed — OW!',
@@ -1549,6 +1685,8 @@ export const PHRASES: Phrase[] = [
     ],
     meaning: 'where is it?',
     mnemonic: ['you', 'nigh?'],
+    link:
+      'The knight jabs a finger at YOU and asks NIGH — where is it, then?',
     scene: [
       'A finger jabbing straight out of the frame at YOU.',
       'A knight in armour pointing down a forked road, question mark overhead.',
@@ -1572,6 +1710,8 @@ export const PHRASES: Phrase[] = [
     ],
     meaning: 'here',
     mnemonic: ['tea', 'knee'],
+    link:
+      'You set the TEA down on the X and tap your KNEE: here, this place.',
     scene: [
       'A cup of tea set down hard on a spot marked with an X.',
       'A bare knee with a plaster on it.',
@@ -1590,6 +1730,8 @@ export const PHRASES: Phrase[] = [
     ],
     meaning: 'near',
     mnemonic: ['cli(mb)'],
+    link:
+      'Your fingers are already curled over the ledge as you CLImb — the top is near.',
     scene: ['A climber\'s hand already over the ledge, the top a few inches away.'],
     art: [{ component: 'Climb', props: { far: false } }],
     category: 'directions',
@@ -1607,6 +1749,8 @@ export const PHRASES: Phrase[] = [
     ],
     meaning: 'far',
     mnemonic: ['cli(mb)'],
+    link:
+      'You are at the foot of the CLIff with the summit a speck overhead — far.',
     scene: ['A climber at the foot of a cliff, the summit a tiny notch far above.'],
     art: [{ component: 'Climb', props: { far: true } }],
     category: 'directions',
@@ -1629,6 +1773,8 @@ export const PHRASES: Phrase[] = [
     ],
     meaning: 'taxi',
     mnemonic: ['taxi'],
+    link:
+      'A TAXI sat at the kerb with its roof light on, waiting for you.',
     scene: ['A taxi with its roof light lit, waiting at a kerb.'],
     art: [{ component: 'Taxi' }],
     category: 'transport',
@@ -1652,6 +1798,8 @@ export const PHRASES: Phrase[] = [
     ],
     meaning: 'stop right here',
     mnemonic: ['jot', 'throng', 'knee'],
+    link:
+      'You JOT one note, the THRONG stops dead, and you tap your KNEE: stop right here.',
     scene: [
       'A pen jotting one quick line on a notepad.',
       'A throng of people packed shoulder to shoulder in a straight line.',
@@ -1677,6 +1825,8 @@ export const PHRASES: Phrase[] = [
     ],
     meaning: 'turn the meter on',
     mnemonic: ['pert', 'meter'],
+    link:
+      'The PERT tulip snaps open at the same moment the METER starts ticking — turn it on.',
     scene: [
       'A tulip snapping open, stem bolt upright and pert.',
       'A taxi meter clicking over from 35.',
@@ -1702,6 +1852,8 @@ export const PHRASES: Phrase[] = [
     meaning: 'traffic jam',
     literal: 'the car is stuck',
     mnemonic: ['rot', 'tit'],
+    link:
+      'A ROTting apple and a TIT that will not let go of the feeder: the traffic is stuck exactly like that.',
     scene: [
       'A rotting apple, brown and collapsing in on itself.',
       'A great tit clamped to a bird feeder, claws locked, refusing to let go.',
@@ -1726,6 +1878,8 @@ export const PHRASES: Phrase[] = [
     ],
     meaning: 'motorbike',
     mnemonic: ['motor', 'sigh'],
+    link:
+      'A bare MOTOR and a helmet SIGHing steam — that is the motorbike.',
     scene: [
       'A bare engine block with its pistons showing.',
       'A crash helmet with a long sigh of steam escaping the visor.',
@@ -1746,6 +1900,8 @@ export const PHRASES: Phrase[] = [
     ],
     meaning: 'to rent',
     mnemonic: ['chow'],
+    link:
+      'Keys balanced on the rim of a bowl of CHOW: yours to rent by the day.',
     scene: ['A steaming bowl of chow with a set of rental keys resting on the rim.'],
     art: [{ component: 'ChowKeys' }],
     category: 'transport',
@@ -1773,6 +1929,8 @@ export const PHRASES: Phrase[] = [
     ],
     meaning: 'any rooms free?',
     mnemonic: ['me', 'Hong', 'wang!', 'my?'],
+    link:
+      'ME in HONG Kong, a gong going WANG, the knight asking MY? — any rooms free?',
     scene: [
       'Dee jabbing a thumb at their own chest — me.',
       'The Hong Kong skyline at dusk.',
@@ -1804,6 +1962,8 @@ export const PHRASES: Phrase[] = [
     ],
     meaning: 'hot water',
     mnemonic: ['Viet-NAM', '(p)rawn'],
+    link:
+      'The VietNAM hat and the PRAWN go into the same steaming pot: hot water.',
     scene: [
       'A conical Vietnamese hat floating on the surface of a lake.',
       'A prawn dropped into a steaming pot, curling as it hits.',
@@ -1830,6 +1990,8 @@ export const PHRASES: Phrase[] = [
     ],
     meaning: 'what time is it?',
     mnemonic: ['key', 'moan'],
+    link:
+      'You hold up a KEY and MOAN at the wall clock: what time is it?',
     scene: [
       'A heavy brass key lying flat.',
       'Dee moaning at a wall clock, hands over the face.',
@@ -1854,6 +2016,8 @@ export const PHRASES: Phrase[] = [
     ],
     meaning: 'right now',
     mnemonic: ['dawn', 'knee'],
+    link:
+      'DAWN cracks and you slap your KNEE — right now, not later.',
     scene: [
       'A sun cracking the horizon at dawn.',
       'A bare knee with a plaster on it.',
@@ -1878,6 +2042,8 @@ export const PHRASES: Phrase[] = [
     ],
     meaning: 'today',
     mnemonic: ['one', 'knee'],
+    link:
+      'ONE finger tapping your KNEE: this one day, today.',
     scene: [
       'A single large numeral 1 standing on its own.',
       'A bare knee with a plaster on it.',
@@ -1900,6 +2066,8 @@ export const PHRASES: Phrase[] = [
     ],
     meaning: 'tomorrow',
     mnemonic: ['prong', 'knee'],
+    link:
+      'A PRONG bends up off your KNEE, pointing one day ahead: tomorrow.',
     scene: ['A single fork prong bent sharply upward.', 'A bare knee with a plaster on it.'],
     art: [{ component: 'Prong' }, { component: 'Knee' }],
     category: 'time',
@@ -1921,6 +2089,8 @@ export const PHRASES: Phrase[] = [
     ],
     meaning: 'yesterday',
     mnemonic: ['mmm-uh', 'wan'],
+    link:
+      'You hum MMM-uh at a WAN, washed-out face in the mirror: that was yesterday.',
     scene: [
       'A mouth humming MMM with the lips pulled flat and wide, never rounded.',
       'A pale, wan face with dark circles under the eyes.',
@@ -1945,6 +2115,8 @@ export const PHRASES: Phrase[] = [
     ],
     meaning: 'when?',
     mnemonic: ['mmm-uh', 'rye'],
+    link:
+      'You hum MMM-uh over an uncut sheaf of RYE: so when is it getting cut?',
     scene: [
       'A mouth humming MMM with the lips pulled flat and wide, never rounded.',
       'A sheaf of rye stalks tied with string.',
@@ -1965,6 +2137,8 @@ export const PHRASES: Phrase[] = [
     ],
     meaning: 'hold on / in a moment',
     mnemonic: ['Dee: ow!'],
+    link:
+      'DEE stubs a toe — OW! — hold on, just a second.',
     scene: ['Dee hopping on one foot, clutching a stubbed toe.'],
     art: [{ component: 'Dee', props: { action: 'ow' } }],
     category: 'time',
@@ -1981,6 +2155,8 @@ export const PHRASES: Phrase[] = [
     ],
     meaning: 'fast / hurry',
     mnemonic: ['rev'],
+    link:
+      'You REV the throttle hard: fast, get a move on.',
     scene: ['A motorbike throttle twisted hard, speed lines and exhaust puffs behind.'],
     art: [{ component: 'Rev' }],
     category: 'time',
@@ -2005,6 +2181,8 @@ export const PHRASES: Phrase[] = [
     ],
     meaning: "I'm not well",
     mnemonic: ['my', 'subway'],
+    link:
+      'Palm up halfway through MY SUBWAY ride: not well at all.',
     scene: [
       'A flat palm held out, pushing something away.',
       'A subway train pulling into a tiled platform.',
@@ -2028,6 +2206,8 @@ export const PHRASES: Phrase[] = [
     ],
     meaning: 'headache',
     mnemonic: ['poor \'at', 'who-ah?'],
+    link:
+      'A POOR \'AT crushed down on your head and an owl going WHO-AH: headache.',
     scene: [
       'A battered, sorry-looking hat, brim collapsed.',
       'An owl turning its head right round, eyes screwed shut, calling WHO-AH.',
@@ -2052,6 +2232,8 @@ export const PHRASES: Phrase[] = [
     ],
     meaning: 'stomach ache',
     mnemonic: ['poor \'at', 't-hong'],
+    link:
+      'A POOR \'AT in one hand and a snapped T-HONG in the other: your belly has gone.',
     scene: [
       'A battered, sorry-looking hat, brim collapsed.',
       'A rubber flip-flop with its strap snapped clean through.',
@@ -2076,6 +2258,8 @@ export const PHRASES: Phrase[] = [
     ],
     meaning: 'I have a fever',
     mnemonic: ['pen', 'KAY-ak'],
+    link:
+      'A PEN and a KAYak both go under as the fever takes you.',
     scene: [
       'A single fountain pen held up between two fingers.',
       'A kayak nose-down in the water, shipping over the side.',
@@ -2096,6 +2280,8 @@ export const PHRASES: Phrase[] = [
     ],
     meaning: 'medicine',
     mnemonic: ['yaar!'],
+    link:
+      'The pirate shouts YAAR over a bottle of pills: medicine.',
     scene: ['A pirate with an eyepatch shouting YAAR over a bottle of pills.'],
     art: [{ component: 'Pirate' }],
     category: 'health',
@@ -2119,6 +2305,8 @@ export const PHRASES: Phrase[] = [
     ],
     meaning: 'hospital',
     mnemonic: ['wrong', 'pa', 'yaar!', 'barn'],
+    link:
+      'Something is WRONG with PA, so the pirate YAARs him off to the BARN: the hospital.',
     scene: [
       'A big red X stamped across a test paper.',
       'A father in a flat cap, arms folded.',
@@ -2146,6 +2334,8 @@ export const PHRASES: Phrase[] = [
     ],
     meaning: "I'm allergic to",
     mnemonic: ['pear'],
+    link:
+      'A PEAR breaking out in a red rash: allergic.',
     scene: ['A pear with a red rash of spots spreading across its skin.'],
     art: [{ component: 'RashPear' }],
     category: 'health',
@@ -2165,6 +2355,8 @@ export const PHRASES: Phrase[] = [
     ],
     meaning: 'hot',
     mnemonic: ['(p)rawn'],
+    link:
+      'A PRAWN curling and spitting on the grill: hot.',
     scene: ['A prawn sizzling and curling on a hot grill.'],
     art: [{ component: 'PrawnGrill' }],
     category: 'weather',
@@ -2182,6 +2374,8 @@ export const PHRASES: Phrase[] = [
     ],
     meaning: 'cold (weather)',
     mnemonic: ['now!'],
+    link:
+      'You jab the watch — NOW! — and frost creeps across the glass: cold.',
     scene: ['A finger jabbing a watch face — NOW! — with frost creeping across the glass.'],
     art: [{ component: 'NowWatch' }],
     category: 'weather',
@@ -2204,6 +2398,8 @@ export const PHRASES: Phrase[] = [
     meaning: "it's raining",
     literal: 'rain falls',
     mnemonic: ['fawn', 'tock'],
+    link:
+      'A FAWN standing out in it while the pendulum goes TOCK: rain, falling.',
     scene: [
       'A fawn standing out in the rain, ears flattened.',
       'A clock pendulum caught at the far right of its swing — TOCK.',
@@ -2229,6 +2425,8 @@ export const PHRASES: Phrase[] = [
     ],
     meaning: 'watch out! / be careful',
     mnemonic: ['rah!', 'wang!'],
+    link:
+      'A RAH in one ear and a gong WANG in the other: watch out!',
     scene: [
       'A cheerleader\'s open mouth mid RAH, one pom-pom thrust up.',
       'A brass gong struck hard right beside an ear — WANG.',
@@ -2253,6 +2451,8 @@ export const PHRASES: Phrase[] = [
     ],
     meaning: 'fire!',
     mnemonic: ['fie', 'my'],
+    link:
+      '“FIE! MY roof!” — the old cry of alarm as the match catches: fire!',
     scene: [
       'A match struck, the flame just catching.',
       'A flat palm held out, pushing something away.',

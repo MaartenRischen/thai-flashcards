@@ -90,6 +90,12 @@ export interface Phrase {
   meaning: string;
   literal?: string;
   mnemonic: string[]; // one entry per panel
+  /**
+   * The half a keyword mnemonic dies without: one sentence tying the keywords
+   * to what the phrase MEANS. Without it a card teaches "pai sounds like pie"
+   * and stops — the learner recalls a pie and has no route back to "go".
+   */
+  link: string;
   scene: string[]; // same length as mnemonic; alt text + illustration brief
   art?: ArtSpec[]; // same length as mnemonic when present
   category: Category;
