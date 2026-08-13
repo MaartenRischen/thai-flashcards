@@ -42,6 +42,15 @@ export default defineConfig({
         globPatterns: ['**/*.{js,css,html,svg,png,ico,woff2}'],
         navigateFallback: `${base}index.html`,
         cleanupOutdatedCaches: true,
+        // These two are NOT optional here, and `registerType: 'autoUpdate'`
+        // does not supply them once a custom `workbox` block is present.
+        // Without them the generated worker only calls skipWaiting() in
+        // response to a SKIP_WAITING message that nothing ever sends: a new
+        // version installs, precaches, and then sits in `waiting` for good.
+        // Observed in production — the deployed bundle was correct and every
+        // client kept serving the previous one, indefinitely.
+        skipWaiting: true,
+        clientsClaim: true,
       },
     }),
   ],
