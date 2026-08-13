@@ -7,7 +7,7 @@ spaced repetition. Static site, no backend, no accounts, works offline.
 ```bash
 npm install
 npm run dev            # http://localhost:5173/thai-flashcards/
-npm test               # 54 unit tests
+npm test               # 55 unit tests
 npm run build          # → dist/
 ```
 
@@ -32,8 +32,8 @@ measured, it says so.
 ### Scheduler
 
 SM-2 with Anki's defaults, in `src/srs/scheduler.ts` — pure functions, no IO, `now` always passed
-in. 23 tests in `scheduler.test.ts`, 15 more for queue building in `queue.test.ts`, 16 for data
-integrity. All 54 pass.
+in. 23 tests in `scheduler.test.ts`, 15 more for queue building in `queue.test.ts`, 17 for data
+integrity. All 55 pass.
 
 One acceptance criterion could not be met as literally written:
 
@@ -186,30 +186,47 @@ and "pharmacy under emergency" makes the filter lie.
 
 ### Weak mnemonics
 
-**27 of 100 are flagged weak**, above the brief's 15–25 estimate. The bar used was rule 5 —
-say the English out loud, then the Thai, and ask whether a Thai speaker would recognise it — plus
-rule 2: a panel that draws the *meaning* instead of the *sound* is weak even when the phrase is
-useful. Every weak card carries the reason in `notes`, in plain terms, not dressed up. Browse
-badges them and filters to them; Settings can hide them.
+**9 of 100 are flagged weak**, down from 27 after a second pass rewrote 22 of them outright. The
+count moved because the content changed, not because the standard did — every rewrite has a new
+sound-alike and a newly drawn panel behind it.
 
-Four were **downgraded** from weak on a second pass, with the pronunciation note kept: `lék`
-("leg" — Thai final stops are never released, so the g/k distinction does not survive anyway),
-`nít-nòi`, `reo` ("rev" — Thai has no /v/ and substitutes /w/, which is exactly the sound wanted),
-and `gìi-moong`.
+The bar is rule 5 from the brief — say the English out loud, then the Thai, and ask whether a Thai
+speaker would recognise it — plus rule 2: a panel that draws the *meaning* instead of the *sound*
+is weak even when the phrase is useful.
 
-The final self-audit re-read all 100 cold and rewrote the worst five outright:
+What the rewrite actually fixed:
 
-| Card | Was | Now |
+| | Was | Now |
 |---|---|---|
-| ร้านขายยา pharmacy | three panels, all drawn from meaning | **replaced** with ยา *yaa* "medicine" — one panel, one sound |
-| โรงพยาบาล hospital | "wrong / pa / yah-barn", panels drew meaning | every panel now pictures a sound; reuses the ยา pirate |
-| ร้อน hot | "Ron" over a thermometer — no sound image at all | "prawn" on a grill: carries sound *and* meaning |
-| หนาว cold | "now!" over a shivering figure | a finger jabbing a watch — NOW! — frost on the glass |
-| ระวัง watch out | two generic shout noises | a cheerleader mid-RAH, a gong struck WANG by an ear |
+| น้ำ náam | "num" — wrong vowel, wrong length | **"Viet-NAM"** — the British pronunciation ends in exactly /nɑːm/ |
+| ใกล้ / ไกล | "glide" — voiced gl-, and a stray d | **"cli(mb)"** — Thai ก is an unvoiced unaspirated k, so cl- is the right cluster |
+| เปิด pèrt | "burnt" — added an n | **"pert"** — the sound exactly, drawn as a tulip snapping open, which is also what เปิด means |
+| ติด tìt | "tick" — ended in k | **"tit"**, the bird, which also will not let go of the feeder |
+| ไข้ khâi | "kite" — added a t | **"KAY-ak"** — opens on exactly /kaɪ/, and sinks |
+| ฝน fǒn | "phone" — long and diphthongal | **"fawn"** — right vowel colour, and it stands about looking rained on |
+| กี่บาท | "bat" — short vowel | **"baht"** — the English word for the currency already is the Thai one |
+| อันนี้ / อันไหน | alphabet tiles spelling A-N | **"on knee"**, **"on nigh"** — images, not spellings |
+| ขวา khwǎa | "quacks" — bolted a k on | **"kwaaa!"** — the duck's actual call, which climbs like the tone |
+
+The 9 that survive are not laziness, they are the shape of the problem. Six are Thai sounds English
+cannot spell:
+
+- **เมื่อ mûea** (×2) — an unrounded back vowel with no English letter. The panel teaches the mouth
+  shape rather than pretending a word matches.
+- **ปวด pùat** (×2) — a single-syllable glide that English needs two beats for.
+- **เงิน ngern** — English never starts a word with ng-.
+- **ท้อง tháwng** — English "thong" starts /θ/; Thai ท is a hard t with a puff.
+
+The other three are cases where the closest English word still has the wrong vowel (แล้ว láew ×2,
+พรุ่ง phrûng) or the wrong length (ระวัง rá-wang, whose syllables are clipped and whose mnemonic is
+two shouts).
+
+Every weak card opens its note with the word "Weak" and says which half is wrong — there is a test
+that enforces the first part.
 
 ### Art
 
-`src/art/index.tsx` holds **106 drawn components covering all 169 panels**. Nothing falls back to
+`src/art/index.tsx` holds **123 drawn components covering all 170 panels**. Nothing falls back to
 the typographic card any more.
 
 The fallback still exists and is still per *panel*, not per phrase: `ART` is the registry of what
@@ -292,6 +309,6 @@ import. All three cards came back with byte-identical `due` and `ease`.
 ## Known gaps
 
 1. **No device testing beyond headless Chromium on macOS.** See the audio table above.
-2. **27 weak mnemonics.** Flagged and explained, not hidden — but they are the cards most worth
-   replacing next.
+2. **9 weak mnemonics.** Flagged, explained, and mostly irreducible: they are the Thai sounds
+   English has no letters for.
 3. **No Thai script reading instruction**, no grammar, no sentence builder, no sync. All non-goals.

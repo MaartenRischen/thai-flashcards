@@ -32,7 +32,10 @@ export function Browse() {
         p.thai,
         p.meaning,
         p.literal ?? '',
+        // Both forms: a mnemonic written "Viet-NAM" or "poor 'at" should still
+        // be found by someone typing "vietnam" or "poor at".
         p.mnemonic.join(' '),
+        p.mnemonic.join(' ').replace(/[^a-z0-9฀-๿ ]+/gi, ''),
         p.syllables.map((s) => s.roman).join(' '),
         p.syllables.map((s) => stripDiacritics(s.roman)).join(' '),
         // Searching an individual word ("nòi", "ไหม", "question particle")

@@ -42,3 +42,43 @@
 [2026-08-13T09:51:48.170Z] [debug] [vite] connecting...
 [2026-08-13T09:51:48.171Z] [debug] [vite] connected.
 [2026-08-13T09:51:48.181Z] [info] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[2026-08-13T10:14:19.218Z] [debug] [vite] hot updated: /src/index.css
+[2026-08-13T10:14:19.219Z] [debug] [vite] invalidate /src/store.tsx: Could not Fast Refresh ("PHRASES" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+[2026-08-13T10:14:19.219Z] [debug] [vite] hot updated: /src/store.tsx
+[2026-08-13T10:14:19.294Z] [debug] [vite] hot updated: /src/App.tsx
+[2026-08-13T10:14:19.294Z] [debug] [vite] hot updated: /src/screens/Review.tsx
+[2026-08-13T10:14:19.294Z] [debug] [vite] hot updated: /src/screens/Browse.tsx
+[2026-08-13T10:14:19.294Z] [debug] [vite] hot updated: /src/screens/Settings.tsx
+[2026-08-13T10:14:19.294Z] [debug] [vite] hot updated: /src/components/AudioButton.tsx
+[2026-08-13T10:14:19.294Z] [debug] [vite] hot updated: /src/components/CardFace.tsx
+[2026-08-13T10:16:13.536Z] [debug] [vite] hot updated: /src/index.css
+[2026-08-13T10:16:13.536Z] [debug] [vite] invalidate /src/art/index.tsx: Could not Fast Refresh ("hasArt" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+[2026-08-13T10:16:13.536Z] [debug] [vite] hot updated: /src/art/index.tsx
+[2026-08-13T10:16:13.544Z] [debug] [vite] hot updated: /src/components/Panel.tsx
+[2026-08-13T10:16:22.116Z] [debug] [vite] hot updated: /src/index.css
+[2026-08-13T10:16:22.116Z] [debug] [vite] invalidate /src/art/index.tsx: Could not Fast Refresh ("hasArt" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+[2026-08-13T10:16:22.116Z] [debug] [vite] hot updated: /src/art/index.tsx
+[2026-08-13T10:16:22.123Z] [debug] [vite] hot updated: /src/components/Panel.tsx
+[2026-08-13T10:17:25.515Z] [debug] [vite] hot updated: /src/index.css
+[2026-08-13T10:17:25.515Z] [debug] [vite] invalidate /src/store.tsx: Could not Fast Refresh ("PHRASES" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+[2026-08-13T10:17:25.515Z] [debug] [vite] hot updated: /src/store.tsx
+[2026-08-13T10:17:25.588Z] [debug] [vite] hot updated: /src/App.tsx
+[2026-08-13T10:17:25.588Z] [debug] [vite] hot updated: /src/screens/Review.tsx
+[2026-08-13T10:17:25.588Z] [debug] [vite] hot updated: /src/screens/Browse.tsx
+[2026-08-13T10:17:25.588Z] [debug] [vite] hot updated: /src/screens/Settings.tsx
+[2026-08-13T10:17:25.588Z] [debug] [vite] hot updated: /src/components/AudioButton.tsx
+[2026-08-13T10:17:25.588Z] [debug] [vite] hot updated: /src/components/CardFace.tsx
+[2026-08-13T10:17:39.611Z] [debug] [vite] hot updated: /src/index.css
+[2026-08-13T10:17:56.612Z] [log] [vite] server connection lost. Polling for restart...
+[2026-08-13T10:17:58.840Z] [debug] [vite] connecting...
+[2026-08-13T10:17:58.846Z] [debug] [vite] connected.
+[2026-08-13T10:17:59.093Z] [info] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[2026-08-13T10:38:47.577Z] [debug] [vite] hot updated: /src/index.css
+[2026-08-13T10:38:47.578Z] [debug] [vite] invalidate /src/art/index.tsx: Could not Fast Refresh ("hasArt" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+[2026-08-13T10:38:47.578Z] [debug] [vite] hot updated: /src/art/index.tsx
+[2026-08-13T10:38:47.587Z] [debug] [vite] hot updated: /src/components/Panel.tsx
+[2026-08-13T10:38:54.587Z] [debug] [vite] hot updated: /src/screens/Browse.tsx
+[2026-08-13T10:38:54.587Z] [debug] [vite] hot updated: /src/index.css
+[2026-08-13T10:40:11.076Z] [debug] [vite] connecting...
+[2026-08-13T10:40:11.078Z] [debug] [vite] connected.
+[2026-08-13T10:40:11.108Z] [info] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold

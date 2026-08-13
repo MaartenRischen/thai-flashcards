@@ -1897,6 +1897,336 @@ function WrongX() {
   );
 }
 
+/* --------------------------------------------- panels for the rewritten set */
+
+/** น้ำ náam — the last syllable of Vietnam, on the water. */
+function VietHat() {
+  return (
+    <g>
+      <path d="M20 122 q56-16 112 0 q56 16 108 0 v46 h-220z" fill={BLUE} opacity={0.4} />
+      <path d="M20 122 q56-16 112 0 q56 16 108 0" fill="none" stroke={BLUE} strokeWidth="4" strokeLinecap="round" />
+      <path d="M52 118 q78-92 156 0z" fill={AMBER} {...stroke} />
+      <ellipse cx="130" cy="118" rx="78" ry="12" fill={AMBER} {...stroke} />
+      <path d="M130 40 v72" {...thin} opacity={0.4} />
+      <path d="M84 88 q46 14 92 0 M70 104 q60 16 120 0" fill="none" {...thin} opacity={0.4} />
+      <path d="M42 140 q42-10 84 0 q42 10 88 0" fill="none" stroke={BLUE} strokeWidth="3" strokeLinecap="round" opacity={0.6} />
+    </g>
+  );
+}
+
+/** เมื่อ mûea — the mouth shape, because no English word has this vowel. */
+function MmmFlat() {
+  return (
+    <g>
+      <Ground />
+      <ellipse cx="128" cy="92" rx="76" ry="58" fill={FILL} {...stroke} />
+      <path d="M62 90 h132" stroke={L} strokeWidth="9" strokeLinecap="round" />
+      <path d="M62 90 q66 16 132 0" fill="none" {...thin} opacity={0.4} />
+      <g stroke={RED} strokeWidth="4" fill="none" strokeLinecap="round">
+        <path d="M52 74 L28 74" />
+        <path d="M204 74 L228 74" />
+        <path d="M36 66 l-8 8 l8 8" />
+        <path d="M220 66 l8 8 l-8 8" />
+      </g>
+      <g stroke={L} strokeWidth="3" fill="none" strokeLinecap="round" opacity={0.55}>
+        <path d="M206 116 q12 6 10 16" />
+        <path d="M222 106 q14 8 12 20" />
+      </g>
+    </g>
+  );
+}
+
+/** วาน waan — a pale, wan face. */
+function WanFace() {
+  return (
+    <g>
+      <Ground />
+      <ellipse cx="130" cy="86" rx="50" ry="58" fill={FILL} {...stroke} />
+      <ellipse cx="110" cy="82" rx="12" ry="8" fill={DEEP} opacity={0.6} />
+      <ellipse cx="150" cy="82" rx="12" ry="8" fill={DEEP} opacity={0.6} />
+      <circle cx="110" cy="80" r="3.5" fill={L} />
+      <circle cx="150" cy="80" r="3.5" fill={L} />
+      <path d="M96 62 h22 M142 62 h22" {...thin} />
+      <path d="M116 116 h28" {...thin} />
+      <path d="M112 144 v14 M148 144 v14" {...stroke} opacity={0.5} />
+      <path d="M92 40 q38-22 76 0" fill="none" {...stroke} opacity={0.5} />
+    </g>
+  );
+}
+
+/** ปวด pùat — a battered, sorry-looking hat. */
+function PoorHat() {
+  return (
+    <g>
+      <Ground />
+      <ellipse cx="130" cy="126" rx="82" ry="18" fill={DEEP} {...stroke} />
+      <path d="M76 122 q6-58 54-58 q50 0 52 58 q-52 14-106 0z" fill={DEEP} {...stroke} />
+      <path d="M78 104 q52 14 104 0" fill="none" {...thin} opacity={0.5} />
+      <path d="M104 70 l14 14 l-10 10" fill="none" {...thin} />
+      <path d="M158 78 l-8 12 l12 8" fill="none" {...thin} />
+      <path d="M62 128 q12 14 26 12" fill="none" {...thin} opacity={0.6} />
+      <path d="M188 66 q10-8 16 2 M202 50 q12-4 16 6" {...thin} opacity={0.5} />
+    </g>
+  );
+}
+
+/**
+ * ใกล้ glâi / ไกล glai — the same climber, inches from the top or a whole cliff
+ * away from it. The two scenes carry near vs far; the contour carries the tone.
+ */
+function Climb({ far }: ArtProps) {
+  if (far === true) {
+    // The summit is a tiny notch at the top, the climber a speck at the bottom.
+    return (
+      <g>
+        <path d="M150 158 L166 20 L182 44 L196 8 L214 40 L228 22 L244 158z" fill={FILL} {...stroke} />
+        <path d="M196 8 L206 16 L192 22z" fill={AMBER} {...thin} />
+        <path d="M172 60 h40 M162 96 h64 M156 126 h80" {...thin} opacity={0.3} />
+        <circle cx="88" cy="128" r="11" fill={FILL} {...stroke} />
+        <path d="M88 139 v18 M78 148 l20 0 M80 157 l8-10 l8 10" {...stroke} />
+        <path d="M96 120 L124 106" {...stroke} />
+        <path d="M96 92 q4-30 44-52" fill="none" {...thin} strokeDasharray="6 6" opacity={0.45} />
+        <path d="M28 158 h216" {...stroke} opacity={0.4} />
+      </g>
+    );
+  }
+  // The ledge fills the top of the frame; four fingers are already over it.
+  return (
+    <g>
+      <path d="M14 56 h242" stroke={L} strokeWidth="5" strokeLinecap="round" />
+      <path d="M14 12 h242 v44 h-242z" fill={FILL} opacity={0.45} />
+      <path d="M100 46 v22 q0 10 9 10 t9-10 v-22" fill={FILL} {...stroke} />
+      <path d="M118 46 v26 q0 10 9 10 t9-10 v-26" fill={FILL} {...stroke} />
+      <path d="M136 46 v24 q0 10 9 10 t9-10 v-24" fill={FILL} {...stroke} />
+      <path d="M154 46 v18 q0 10 9 10 t9-10 v-18" fill={FILL} {...stroke} />
+      <path d="M100 74 q34 22 72 0 v18 q-36 20-72 0z" fill={FILL} {...stroke} />
+      <circle cx="112" cy="124" r="20" fill={FILL} {...stroke} />
+      <circle cx="106" cy="120" r="3" fill={L} />
+      <path d="M104 134 q10 6 18 0" {...thin} />
+      <path d="M132 118 L152 100" {...stroke} />
+      <path d="M186 52 v-14 l12 6z" fill={AMBER} {...thin} />
+      <path d="M198 90 q10-6 14 2" {...thin} opacity={0.5} />
+    </g>
+  );
+}
+
+/** เปิด pèrt — a tulip snapping open, bolt upright. */
+function PertTulip() {
+  return (
+    <g>
+      <Ground />
+      <path d="M130 158 v-70" stroke={GREEN} strokeWidth="7" strokeLinecap="round" />
+      <path d="M130 124 q-32-6-38-30 q30-2 38 26z" fill={GREEN} {...thin} />
+      <path d="M130 112 q32-8 40-32 q-32 0-40 28z" fill={GREEN} {...thin} />
+      <path d="M100 88 q6-46 30-52 q24 6 30 52 q-30 14-60 0z" fill={PINK} {...stroke} />
+      <path d="M114 44 q16 34 0 46 M146 44 q-16 34 0 46" fill="none" {...thin} opacity={0.5} />
+      <g stroke={AMBER} strokeWidth="3" fill="none" strokeLinecap="round">
+        <path d="M84 40 L68 26 M176 40 L192 26 M130 22 v-16" />
+      </g>
+    </g>
+  );
+}
+
+/** ติด tìt — a great tit that will not let go. */
+function TitBird() {
+  return (
+    <g>
+      <Ground />
+      <path d="M196 16 v112" {...stroke} />
+      <path d="M170 60 h52 v44 h-52z" fill={DEEP} {...stroke} />
+      <path d="M170 82 h52" {...thin} opacity={0.4} />
+      <ellipse cx="112" cy="94" rx="40" ry="30" fill={AMBER} {...stroke} />
+      <path d="M112 74 q40 8 40 24 q-40 10-40-24z" fill={FILL} {...thin} />
+      <circle cx="84" cy="70" r="22" fill={FILL} {...stroke} />
+      <path d="M66 58 q18-16 36 0 q-4 14-18 14 t-18-14z" fill={L} />
+      <circle cx="78" cy="66" r="3.5" fill={FILL} />
+      <path d="M62 74 L44 78 L62 84z" fill={DEEP} {...stroke} />
+      <path d="M138 104 q28 6 30 20" fill="none" {...stroke} />
+      <path d="M150 116 l14 6 M156 108 l16 2" {...thin} />
+      <path d="M84 116 q-34 14-38 34" fill="none" {...stroke} />
+    </g>
+  );
+}
+
+/** พรุ่ง phrûng — a single bent fork prong. */
+function Prong() {
+  return (
+    <g>
+      <Ground />
+      <path d="M104 158 v-52" stroke={L} strokeWidth="12" strokeLinecap="round" />
+      <path d="M104 106 q0-30 -22-44" fill="none" stroke={FILL} strokeWidth="9" strokeLinecap="round" />
+      <path d="M104 106 q0-32 0-48" fill="none" stroke={FILL} strokeWidth="9" strokeLinecap="round" />
+      <path d="M104 106 q4-30 40-52 q16-10 20 6" fill="none" stroke={AMBER} strokeWidth="10" strokeLinecap="round" />
+      <path d="M104 106 q0-30 22-44" fill="none" stroke={FILL} strokeWidth="9" strokeLinecap="round" />
+      <path d="M172 48 q10-8 16 2" {...thin} opacity={0.55} />
+    </g>
+  );
+}
+
+/** ไข้ khâi — a kayak going down at the nose. */
+function Kayak() {
+  return (
+    <g>
+      <path d="M20 122 q56-14 112 0 q56 14 108 0 v46 h-220z" fill={BLUE} opacity={0.4} />
+      <path d="M20 122 q56-14 112 0 q56 14 108 0" fill="none" stroke={BLUE} strokeWidth="4" strokeLinecap="round" />
+      <path d="M56 40 q84-16 150 74 q-70 24-124-8 q-38-24-26-66z" fill={AMBER} {...stroke} />
+      <ellipse cx="112" cy="72" rx="26" ry="17" fill={DEEP} {...stroke} transform="rotate(28 112 72)" />
+      <path d="M40 96 L166 26" stroke={L} strokeWidth="7" strokeLinecap="round" />
+      <path d="M30 106 l-14-14 l22 4z M176 20 l16 12 l-22-2z" fill={FILL} {...stroke} />
+      <path d="M186 122 q12 8 8 20 M206 116 q14 6 12 20" stroke={BLUE} strokeWidth="3" fill="none" strokeLinecap="round" />
+    </g>
+  );
+}
+
+/** ฝน fǒn — a fawn out in the rain. */
+function Fawn() {
+  return (
+    <g>
+      <Ground />
+      <ellipse cx="118" cy="106" rx="44" ry="28" fill={AMBER} {...stroke} />
+      <circle cx="98" cy="98" r="5" fill={FILL} />
+      <circle cx="128" cy="112" r="4" fill={FILL} />
+      <circle cx="140" cy="94" r="4" fill={FILL} />
+      <path d="M154 92 q22-8 24-32" fill="none" stroke={AMBER} strokeWidth="12" strokeLinecap="round" />
+      <circle cx="180" cy="52" r="18" fill={AMBER} {...stroke} />
+      <path d="M166 40 q-16-6-18-16 q14 2 20 10z M194 40 q16-6 18-16 q-14 2-20 10z" fill={AMBER} {...stroke} />
+      <circle cx="186" cy="48" r="3.5" fill={L} />
+      <path d="M196 58 q6 4 0 8" {...thin} />
+      <path d="M88 130 v28 M112 132 v26 M136 130 v28" {...stroke} />
+      <g stroke={BLUE} strokeWidth="3" fill="none" strokeLinecap="round" opacity={0.75}>
+        <path d="M40 18 l-8 26 M72 10 l-8 26 M104 16 l-8 26 M40 62 l-8 26 M72 56 l-8 26 M214 16 l-8 26 M232 54 l-8 26 M212 74 l-8 26" />
+      </g>
+    </g>
+  );
+}
+
+/** เจอกัน jer-gan — a leather jerkin on a peg. */
+function Jerkin() {
+  return (
+    <g>
+      <path d="M188 22 h20 v14 h-20z" fill={DEEP} {...stroke} />
+      <path d="M188 30 h-56" {...stroke} />
+      <path d="M84 46 q46-24 92 0 l14 34 l-22 10 v58 h-76 v-58 l-22-10z" fill={AMBER} {...stroke} />
+      <path d="M130 44 v104" {...thin} opacity={0.5} />
+      <path d="M110 48 q20 18 40 0" fill="none" {...thin} />
+      <circle cx="130" cy="80" r="4" fill={L} />
+      <circle cx="130" cy="102" r="4" fill={L} />
+      <circle cx="130" cy="124" r="4" fill={L} />
+      <path d="M92 90 l-16 6 M168 90 l16 6" {...thin} opacity={0.5} />
+    </g>
+  );
+}
+
+/** อันนี้ an-níi — a trinket sitting ON a knee. */
+function OnKnee() {
+  return (
+    <g>
+      <Ground />
+      <path d="M74 26 q30 0 34 40 q4 32 20 48 q16 14 12 44" fill="none" stroke={L} strokeWidth="30" strokeLinecap="round" />
+      <path d="M74 26 q30 0 34 40 q4 32 20 48 q16 14 12 44" fill="none" stroke={FILL} strokeWidth="24" strokeLinecap="round" />
+      <rect x="88" y="60" width="40" height="22" rx="4" transform="rotate(-14 108 71)" fill={AMBER} {...thin} />
+      <path d="M150 74 q26-18 46 0 q-6 26-24 26 q-18 0-22-26z" fill={PINK} {...stroke} />
+      <path d="M158 74 q16-10 30 0" fill="none" {...thin} opacity={0.6} />
+      <path d="M166 100 v12 h16 v-12" fill="none" {...thin} />
+    </g>
+  );
+}
+
+/** อันไหน an-nǎi — the knight sitting ON the signpost. */
+function KnightOn() {
+  return (
+    <g>
+      <Ground />
+      <path d="M92 158 v-70" {...stroke} strokeWidth="8" />
+      <path d="M92 96 h74 l16 12 l-16 12 h-74z" fill={AMBER} {...stroke} />
+      <path d="M92 96 L34 96 L20 108 L34 120 h58" fill={FILL} {...stroke} />
+      <path d="M112 66 q0-22 18-22 q18 0 18 22 v10 h-36z" fill={DEEP} {...stroke} />
+      <path d="M116 56 h26" stroke={L} strokeWidth="5" strokeLinecap="round" />
+      <path d="M130 44 v-14 l8 6" {...thin} />
+      <path d="M114 88 v-12 h32 v12" fill={FILL} {...stroke} />
+      <path d="M146 82 L188 72" {...stroke} />
+      <path d="M198 42 q0-16 14-16 q14 0 14 12 q0 10-12 14 v8" stroke={AMBER} strokeWidth="7" fill="none" strokeLinecap="round" />
+      <circle cx="214" cy="82" r="4.5" fill={AMBER} />
+    </g>
+  );
+}
+
+/** อยู่ไหน yùu-nǎi in one panel — the knight pointing straight at YOU. */
+function KnightYou() {
+  return (
+    <g>
+      <Ground />
+      <path d="M92 148 v-44 q-8-6-8-16 q0-14 16-14 h22 q16 0 16 14 q0 10-8 16 v44" fill={FILL} {...stroke} />
+      <path d="M98 74 q0-22 18-22 q18 0 18 22 v10 h-36z" fill={DEEP} {...stroke} />
+      <path d="M102 64 h26" stroke={L} strokeWidth="5" strokeLinecap="round" />
+      <path d="M116 52 v-14 l8 6" {...thin} />
+      <path d="M134 100 L172 100" {...stroke} />
+      <circle cx="204" cy="100" r="34" fill={FILL} {...stroke} />
+      <circle cx="204" cy="100" r="20" fill={DEEP} {...stroke} />
+      <path d="M204 66 v-20 q0-10 10-10 t10 10 v20" fill={FILL} {...stroke} />
+      <path d="M212 46 q10-6 14 2" {...thin} opacity={0.5} />
+    </g>
+  );
+}
+
+/** น้ำแข็ง nám-khǎeng — a kangaroo in a conical hat, holding ice. */
+function NamKanga() {
+  return (
+    <g>
+      <Ground />
+      <path d="M84 158 q-14-50 18-74 q26-20 48-4 q16 14 4 40 q-8 16 6 38z" fill={FILL} {...stroke} />
+      <circle cx="158" cy="62" r="20" fill={FILL} {...stroke} />
+      <circle cx="164" cy="60" r="3.5" fill={L} />
+      <path d="M172 72 q10 12-2 18 q-10 4-10-10z" fill={PINK} {...thin} />
+      <path d="M120 44 q38-40 76 0z" fill={AMBER} {...stroke} />
+      <ellipse cx="158" cy="44" rx="38" ry="7" fill={AMBER} {...stroke} />
+      <path d="M84 158 q-40 6-52-14" fill="none" {...stroke} />
+      <rect x="184" y="100" width="38" height="38" rx="5" fill={BLUE} opacity={0.55} {...stroke} />
+      <path d="M192 110 l10 10 M214 108 l-12 14" stroke={FILL} strokeWidth="3" strokeLinecap="round" />
+      <path d="M158 122 L184 120" {...stroke} />
+    </g>
+  );
+}
+
+/** บาท bàat — a fan of banknotes. */
+function BahtNotes() {
+  return (
+    <g>
+      <Ground />
+      {[
+        [-26, 44],
+        [-13, 34],
+        [0, 30],
+        [13, 34],
+        [26, 44],
+      ].map(([rot, y], i) => (
+        <g key={i} transform={`rotate(${rot} 130 150)`}>
+          <rect x="86" y={y} width="88" height="52" rx="5" fill={PINK} {...stroke} opacity={0.92} />
+          <circle cx="130" cy={y + 26} r="14" fill="none" {...thin} opacity={0.6} />
+          <path d={`M96 ${y + 12} h14 M150 ${y + 40} h14`} {...thin} opacity={0.5} />
+        </g>
+      ))}
+    </g>
+  );
+}
+
+/** เงิน ngern — a wage packet, which is what you earn. */
+function WagePacket() {
+  return (
+    <g>
+      <Ground />
+      <path d="M64 40 h108 v92 h-108z" fill={FILL} {...stroke} />
+      <path d="M64 40 l54 40 l54-40" fill="none" {...stroke} />
+      <path d="M78 100 h56 M78 116 h34" {...thin} opacity={0.45} />
+      <circle cx="186" cy="96" r="15" fill={AMBER} {...stroke} />
+      <circle cx="212" cy="122" r="12" fill={AMBER} {...stroke} />
+      <circle cx="192" cy="140" r="10" fill={AMBER} {...stroke} />
+      <path d="M186 92 v8 M212 118 v8" {...thin} opacity={0.6} />
+      <path d="M176 66 q14-8 20 2" {...thin} opacity={0.5} />
+    </g>
+  );
+}
+
 /* ------------------------------------------------------------------ registry */
 
 /**
@@ -2012,6 +2342,24 @@ export const ART: Record<string, (props: ArtProps) => JSX.Element> = {
   HongWater: (p: ArtProps) => Hong({ ...p, wang: false }),
   HongWang: (p: ArtProps) => Hong({ ...p, wang: true }),
   Van: (p: ArtProps) => Mower({ ...p, van: true }),
+  // Panels for the rewritten mnemonics.
+  VietHat,
+  MmmFlat,
+  WanFace,
+  PoorHat,
+  Climb,
+  PertTulip,
+  TitBird,
+  Prong,
+  Kayak,
+  Fawn,
+  Jerkin,
+  OnKnee,
+  KnightOn,
+  KnightYou,
+  NamKanga,
+  BahtNotes,
+  WagePacket,
 };
 
 export function hasArt(component: string): boolean {
