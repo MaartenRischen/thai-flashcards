@@ -52,10 +52,20 @@ below the unfuzzed interval minus 5% (checked across 3–365 days × 40 seeded d
 Verified by killing the server, not by trusting the plugin.
 
 ```
-service worker: 1 registration, state=activated, 14 precache entries (351 KiB)
+service worker: 1 registration, state=activated, 14 precache entries
 server killed → reload → app renders, review state intact, 0 console errors
 → Browse and Settings also render from cache
 ```
+
+**And a bug that only showed up in production.** Every deploy reached GitHub Pages correctly and
+reached nobody: a new worker installed, precached the new bundle, then sat in `waiting` forever
+while clients kept serving the previous version. `registerType: 'autoUpdate'` only injects
+`skipWaiting`/`clientsClaim` when there is no custom `workbox` block — this config has one, so the
+generated worker's only route to activation was a `SKIP_WAITING` message nothing ever sent.
+
+Caught by checking the live weak-mnemonic count after a deploy and finding the old number.
+`skipWaiting` and `clientsClaim` are now set explicitly. Verified by leaving a stale client in
+place and reloading: old bundle, then new bundle, then `waiting: false`.
 
 ### Performance (Lighthouse 12, default mobile profile: 1638 kbps, 150 ms RTT, 4× CPU)
 
